@@ -1,0 +1,147 @@
+﻿nav#dashboardContent {
+    position: relative;
+    display: block;
+    max-height: calc(100vh - (56px * 2));
+}
+
+/* Conteudo do Usuário */
+
+h2#noUserMsg {
+    font-size: 20px;
+    margin: 20px auto;
+    color: rgb(255, 100, 100);
+}
+
+div#userProps {
+    width: 95%;
+}
+
+div#userHeader {
+    background-color: var(--item-color-1);
+    box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0 / 50%;
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+img#userAvatar {
+    width: 140px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+a#userName {
+    background-color: #222731;
+    padding: 3px;
+    cursor: default;
+}
+
+div#userContents {
+    width: 100%;
+    display: none;
+    animation: opacity 0.5s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.userPropsInputs {    
+    margin: 0 10px;
+    resize: vertical;
+    min-height: 15px;
+    max-height: 200px;
+    border: none;
+    outline: none;
+    padding: 4px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--item-color-2);
+    border: solid black 2px;
+    transition: background-color 0.3s;
+}
+
+.userPropsInputs:focus {
+    background-color: var(--item-color-2-h);
+}
+
+p.dashboardContentSeparation {
+    text-align: left;
+    width: 85%;
+    min-height: 20px;
+    padding: 10px 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: var(--item-color-1);
+    box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+p.dashboardContentSeparation p {
+    margin: 5px;
+}
+
+p#marry {
+    display: flex;
+    align-items: center;
+}
+
+alpha-bold#marry-info {
+    display: flex;
+    margin-left: 5px;
+}
+
+alpha-bold#marry-info-name {
+    vertical-align: middle;
+}
+
+img#marry-info-img {
+    object-fit: contain;
+    width: 30px;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+
+textarea#aboutme-box {
+    height: 50px;
+    width: 95%;
+    margin-top: 5px;
+}
+
+p#color {
+    display: flex;
+    align-items: center;
+}
+
+p#color-info {
+    height: 25px;
+    display: flex;
+}
+
+input#color-box {
+    padding: 0 2px;
+    height: 100%;
+}
+
+button#color-button {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--item-button-color-1);
+    border: solid black 2px;
+    color: white;
+    transition: all 0.5s;
+}
+
+button#color-button:hover {
+    background-color: var(--item-button-color-1-h);
+}
+
+h3#costAlert {
+    width: 300px;
+    font-size: 18px;
+    margin: 0 auto;
+    transform: translateY(10px);
+}

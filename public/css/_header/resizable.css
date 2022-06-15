@@ -1,0 +1,18 @@
+@media screen and (max-width:700px) {
+    header ul li.header-buttons {
+        display: none;
+    }
+
+    header ul li#alpha-image {
+        margin-right: 0px;
+    }
+
+    li.open-close-button {
+        display: inline-block;
+        margin-right: auto;
+    }
+
+    .mobile-header li.open-close-button {
+        display: inline-block;
+    }
+}

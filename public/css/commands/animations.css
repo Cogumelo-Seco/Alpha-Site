@@ -1,0 +1,5 @@
+@keyframes openCommandInfos {
+    to {
+        opacity: 1;
+    }
+}

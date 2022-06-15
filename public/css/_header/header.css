@@ -1,0 +1,201 @@
+header {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    background-color: var(--page-color-1);
+    top: 0;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.733);
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão do usuário e botão Home com a foto do alpha */
+
+li#alpha-image img,
+li.user-button img {
+    width: 35px;
+    border-radius: 50%;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+li#alpha-image img:hover,
+li.user-button img:hover {
+    border-radius: 15px;
+}
+
+li#alpha-image {
+    margin-right: auto;
+    margin-left: 18px;
+}
+
+li.user-button {
+    margin-left: auto;
+    margin-right: 18px;
+}
+
+header ul li.header-buttons {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 18px;
+    color: black;
+    transition: all 0.2s;
+}
+
+header ul li a {
+    color: white;
+    transition: all 0.5s;
+}
+
+header ul li.header-buttons:hover,
+header ul li a:hover {
+    color: rgb(233, 166, 255);
+    transform: translateY(0.5px);
+}
+
+/* Botão e caixa de linguagem */
+
+header ul div#language {
+    width: 80px;
+    z-index: 1;
+}
+
+header ul div#language img#lang-image {
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    vertical-align: top;
+    margin: 5px 20px;
+    width: 35px;
+    height: 35px;
+    transition: 0.7s;
+}
+
+header ul div#language ul#selectLangBox {
+    display: none;
+    background-color: var(--page-color-1);
+    position: absolute;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 45px;
+    border: solid black 1px;
+    border-radius: 15px;
+    transform: translateY(-45px);
+    opacity: 0;
+    animation: langBox 0.15s ease forwards;
+}
+
+li#languagePT, 
+li#languageEN {
+    margin-right: auto;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+}
+
+li#languagePT:hover, 
+li#languageEN:hover {
+    color: rgb(233, 166, 255);
+}
+
+img#lang-image:hover {
+    background-color: #b27bf22a;
+}
+
+img#languagePTFlag {
+    vertical-align: top;
+}
+
+img.languageFlag {
+    margin-right: 5px;
+    display: inline-block;
+    width: 30px;
+    height: auto;
+}
+
+/* Painel lateral para quando a tela for diminuida */
+
+div#mobile-header {
+    display: none;
+    background-color: var(--page-color-1);
+    border-right: solid black 2px;
+    position: fixed;    
+    height: 100%;
+    width: 200px;
+    z-index: 3;
+    top: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: mobileHeaderOpen 0.2s linear forwards;
+}
+
+div#ofuscation {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.400);
+    height: 100%;
+    width: 100%;
+}
+
+div#mobile-header li.header-buttons {
+    list-style-type: none;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+div#mobile-header li a {
+    padding: 0 5px;
+    font-size: 23px;
+    color: white;
+}
+
+div#mobile-header li a:hover,
+div#mobile-header li:hover {
+    color: rgb(233, 166, 255);
+    transform: translateX(1px);
+}
+
+li.open-close-button {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+}
+
+li.user-button.login-exit {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+a#headerUserName {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #23272a;
+    border-bottom: solid black 2px;
+}

@@ -1,0 +1,558 @@
+nav#dashboardContent {
+    position: relative;
+    display: block;
+    max-height: calc(100vh - (56px * 2));
+}
+
+/* Conteudo do servidor */
+
+div#serverProps {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+div#serverHeader {
+    background-color: var(--item-color-1);
+    box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+img#guildIcon {
+    width: 140px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+a#guildName {
+    background-color: #222731;
+    padding: 3px;
+    cursor: default;
+}
+
+div#serverContents {
+    width: 100%;
+    display: none;
+    animation: opacity 0.5s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+div.dashboardContents {
+    margin-top: 30px;
+    display: none;
+    animation: opacity 0.5s;
+}
+
+div.dashboardContentSeparation {
+    text-align: left;
+    width: 85%;
+    min-height: 20px;
+    padding: 10px 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: var(--item-color-1);
+    box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+p.dashboardContentTitle {
+    float: left;
+    border-bottom: solid #b27bf290 2px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 2px;
+}
+
+p.dashboardContentCaption {
+    clear: both;
+    width: auto;
+    margin: 10px 0;
+    padding: 0;    
+}
+
+.serverPropsSelect {
+    cursor: pointer;
+    outline: none;
+    border-radius: 7px;
+    margin: 0;
+    padding: 3px;
+    color: white;
+    background-color: var(--item-color-2);
+    border: solid black 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all 0.3s;
+}
+
+.serverPropsSelect option {
+    font-weight: bold;
+}
+
+.serverPropsSelect.serverPropsInputs.Language {
+    margin-left: 5px;
+}
+
+.serverPropsInputs:focus {
+    background-color: var(--item-color-2-h);
+}
+
+a.openContents {
+    float: right;
+    transition: all 0.4s;
+}
+
+a.openContents.up {
+    transform: rotateZ(-180deg);
+}
+
+a.openContents.up:hover {
+    transform: rotateZ(-180deg) translateY(2px);
+}
+
+a.openContents.down {
+    transform: rotateZ(0);
+}
+
+a.openContents.down:hover {
+    transform: rotateZ(0) translateY(2px);
+}
+
+.dashboardMessageEditContent {
+    text-align: center;
+    width: 100%;
+}
+
+.dashboardMessageEdit { 
+    display: inline-table;
+    min-height: 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--item-color-2);
+    border: solid black 2px;
+}
+
+.dashboardMessageEdit.Panel {
+    margin-right: 20px;
+    width: 25%;
+    text-align: center;
+}
+
+.dashboardMessageEdit.Panel div {
+    border-bottom: solid black 2px;
+}
+
+.dashboardMessageEdit.Panel p {
+    margin: 5px;
+    padding: 0;
+}
+
+.dashboardMessageEdit.Panel textarea,
+.dashboardMessageEdit.Panel input {
+    outline: none;
+    resize: vertical;
+    width: 85%;
+    height: 20px;
+    min-height: 20px;
+    max-height: 200px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 8px;
+    color: white;
+    background-color: #222731;
+    border: solid black 2px;
+    transition: all 0.3s;
+}
+
+.dashboardMessageEdit.Panel textarea:focus,
+.dashboardMessageEdit.Panel input:focus {
+    background-color: #2c2f38;
+}
+
+input.inputColor {
+    padding: 0 2px!important;
+    width: 50%!important;
+    height: 25px!important;
+}
+
+.dashboardMessageEdit.Massage {
+    width: 70%;
+    text-align: left;
+}
+
+.dashboardMessageEdit.Embed {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    max-width: 93%;
+    border-radius: 4px;
+    background-color: #2f3136;
+    border: 0;
+    border-left: solid black 4px;
+}
+
+div.messageContent {
+    font-size: 1rem;
+    border: 0;
+    margin-bottom: 2px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+div.grid {
+    overflow: hidden;
+    padding: .5rem 1rem 1rem .75rem;
+    display: inline-grid;
+    display: -ms-inline-grid;
+    display: -moz-inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+div.embedAuthor {
+    display: flex;
+    align-items: center;
+    grid-column: 1/1;
+    margin-top: 8px;
+}
+
+img.embedAuthorAvatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+span.embedAuthorName {
+    font-size: 0.775rem;
+    font-weight: 600;    
+    unicode-bidi: plaintext;
+    vertical-align: middle;
+}
+
+div.embedThumbnail {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    grid-row: 1/8;
+    grid-column: 2/2;
+    margin-left: 16px;
+    margin-top: 8px;
+    justify-self: end;
+}
+
+img.embedThumbnail {
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+div.embedImage {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    grid-column: 1/3;
+    contain: paint;
+    border-radius: 4px;
+}
+
+img.embedImage {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+div.embedTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+div.embedDescription {
+    font-size: 0.775rem;
+    line-height: .925rem;
+    font-weight: 400;
+    white-space: pre-line;
+    grid-column: 1/1;
+    margin-top: 8px;
+    vertical-align: baseline;
+}
+
+div.embedFooter {  
+    display: flex;
+    max-width: 300px;
+    align-items: center;
+    grid-row: auto/auto;
+    margin-top: 10px;
+    grid-column: 1/3;
+    grid-row: auto/auto;
+}
+
+span.embedFooter {
+    font-size: 0.65rem;
+    line-height: 1rem;
+    font-weight: 500;
+    unicode-bidi: unicode-bidi;
+    white-space: pre-line;
+    vertical-align: middle;
+}
+
+img.embedFooterIcon {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+button {
+    background-color: var(--item-button-color-1);
+}
+
+button:hover {
+    background-color: var(--item-button-color-1-h);
+}
+
+button.messageTestButton {
+    margin: 0;
+    margin-left: 5px;
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid black 2px;
+    color: white;
+    transition: all 0.5s;
+}
+
+button#addChannel {
+    display: inline;
+    margin: 0;
+    margin-left: 5px;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid black 2px;
+    color: white;
+    transition: all 0.5s;
+}
+
+div.placeholdersTable {
+    width: 100%;
+    border: solid black 2px;
+    border-radius: 8px;
+    background-color: var(--item-color-2);
+}
+
+table.placeholdersTable {
+    width: 100%;
+    text-align: center;    
+}
+
+table.placeholdersTable tr.tableTitle {
+    color: rgb(233, 166, 255);
+    font-size: 22px;
+    font-weight: bold;
+    border-top: none
+}
+
+table.placeholdersTable tr {
+    border-top: solid black 1px;
+}
+
+table.placeholdersTable td {
+    padding: 7px;
+    width: 50%;
+}
+
+img#YTChannelsYTIcon {
+    margin: 0 7px;
+    height: 21px;
+}
+
+.YTChannelsContent {
+    width: 100%;
+    height: 100%;
+}
+
+.YTChannelsContaner {
+    width: 100%;
+}
+
+.YTChannelsDisplay {
+    display: inline-table;
+    min-height: 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--item-color-2);
+    border: solid black 2px;
+}
+
+.YTChannelsDisplay.List {
+    transform: translateY(-29px);
+    margin-right: 20px;
+    min-width: 25%;
+    width: 25%;
+    text-align: center;
+}
+
+.YTChannelsDisplay.Contaner {
+    width: 70%;
+}
+
+div.YTChannel {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    width: calc(100%-10px);
+    margin: 5px;
+    color: white;
+    background-color: #222731;
+    border: solid black 2px;
+}
+
+div.YTChannel img.YTChannelImage {
+    cursor: pointer;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border: solid black 2px;
+}
+
+div.YTChannel span.YTChannelName {
+    word-break: break-all;
+    margin: 0 5px;
+}
+
+div.YTChannel button.YTChannelButton {
+    margin-left: auto;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    background-color: #383b44;
+    border: none;
+    transition: all 0.5s;
+}
+
+div.YTChannel button.YTChannelButton:hover {
+    background-color: #43464e;
+}
+
+div#YTChannelsAddChannelInfo {
+    display: flex;
+    align-items: center;
+}
+
+img#YTChannelsAddChannelImage {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border: solid black 2px;
+}
+
+input#YTChannelsAddChannelInput {
+    outline: none;
+    height: 20px;
+    margin: 5px;
+    margin-top: 0;
+    padding: 4px;
+    border-radius: 8px;
+    color: white;
+    background-color: #222731;
+    border: solid black 2px;
+    transition: all 0.5s;
+}
+
+input#YTChannelsAddChannelInput:focus {
+    background-color: #2c2f38;
+}
+
+button.YTChannelsSearchButtons {
+    margin-right: 5px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #222731;
+    border: solid black 2px;
+    color: white;
+    transition: all 0.5s;
+}
+
+button.YTChannelsSearchButtons:hover {
+    background-color: #2c2f38;
+}
+
+button#YTChannelsSearchChannel {
+    transform: translateY(8px);
+}
+
+img#YTChannelsSearchChannelButtonImage {
+    height: 100%;
+}
+
+/* Switch liga e desliga */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    width: 45px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 81, 81);
+    border: solid black 2px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 40px;
+}
+
+.slider:before {
+    border-radius: 50%;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 1px;
+    border: solid black 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(139, 255, 123);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}

@@ -1,0 +1,78 @@
+nav#dashboardContent {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+/* Painel lateral */
+
+div#controlPanel {
+    float: left;
+    background-color: var(--page-color-1);
+    border-right: 2px solid rgba(0, 0, 0, 0.733);
+    height: calc(100vh - (56px * 2));
+    width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+p.controlPanel-buttons {
+    cursor: pointer;
+    padding: 0 10px;
+    margin: 5px 0;
+    height: 35px;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+p.controlPanel-buttons:hover {
+    color: rgb(233, 166, 255);
+    transform: translateX(1px);
+}
+
+p#disconnectUser {
+    color: rgb(255, 120, 120);
+}
+
+p#disconnectUser:hover {
+    color: rgb(255, 50, 50);
+}
+
+/* Botão Salvar */
+
+div button#save-button {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    bottom: 5px;
+    right: 5px;
+    height: 40px;
+    width: 90px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(178, 123, 242, 0.565);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s;  
+}
+
+div button#save-button:hover {
+    color: rgb(233, 166, 255);
+    transform: translateY(-1px);
+}
+
+@media screen and (max-width:700px) {
+    div#controlPanel {
+        border-right: 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.733);
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+}

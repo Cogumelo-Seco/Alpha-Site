@@ -1,0 +1,22 @@
+@media screen and (max-width:700px) {
+    nav#content {
+        height: auto;
+    }
+
+    input#searchInput {
+        width: 90%;;
+    }
+
+    div#controlPanel {
+        border-right: 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.733);
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    
+    div.command {
+        margin: 25px auto;
+        width: 88%;
+    }
+}

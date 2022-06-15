@@ -1,0 +1,13 @@
+@media screen and (max-width:800px) {
+    nav#dashboardContent {
+        max-height: 100%;
+    }
+
+    div#serversList {
+        width: 100%;
+    }
+
+    div.serverInfos {
+        display: none;
+    }
+}

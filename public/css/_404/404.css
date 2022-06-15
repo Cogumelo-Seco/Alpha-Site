@@ -1,0 +1,38 @@
+section {
+    position: relative;
+    height: calc(100vh - (59px * 2));
+}
+
+div#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) ;
+    text-align: center;
+}
+
+#description {
+    font-size: 20px;
+}
+
+#number{    
+    color: #FF0000;
+    font-size: 150px;
+    animation: neon404 5s ease-in-out infinite;
+}
+
+#err-main-button {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.7);
+    background-color: #9a4af590;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px 30px 5px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+#err-main-button:hover {
+    background-color: #892be279;
+}

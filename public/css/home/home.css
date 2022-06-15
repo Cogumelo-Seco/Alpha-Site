@@ -1,0 +1,27 @@
+h1#title {
+    margin: 50px auto;
+    font-size: 50px;
+}
+
+h3#description {
+    width: 300px;
+    font-size: 18px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+#add-button {
+    position: relative;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.7);
+    border: none;
+    outline: none;
+    padding: 10px 50px 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: #9a4af590;
+    color: white;
+}
+
+#add-button:hover {
+    animation: addButtonHover 1s linear infinite;
+}

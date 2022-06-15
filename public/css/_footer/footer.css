@@ -1,0 +1,28 @@
+footer {
+    display: block;
+    text-align: center;
+    background-color: var(--page-color-1);
+    border-top: 2px solid rgba(0, 0, 0, 0.733);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    overflow: hidden;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+footer p:hover {
+    font-size: 15.4px;
+}
+
+.topGG {
+    cursor: pointer;
+    margin: 0px 2px;
+}

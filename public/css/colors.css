@@ -1,0 +1,10 @@
+body {
+    --body-background: rgb(38, 44, 50);
+    --page-color-1: rgb(18, 24, 30);
+    --item-color-1: rgb(24, 29, 39);
+    --item-color-1-h: rgb(34, 39, 49);
+    --item-color-2: rgb(68, 74, 85);
+    --item-color-2-h: rgb(63, 69, 80);
+    --item-button-color-1: rgb(39, 44, 55);
+    --item-button-color-1-h: rgb(49, 54, 65);
+}

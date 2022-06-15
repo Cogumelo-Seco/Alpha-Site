@@ -1,0 +1,159 @@
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #717171;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #575757;
+}
+
+/* Circulo de Carregando */
+
+div#loadingCircle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    background: url(../imgs/avatar/Roxo.png) no-repeat center;
+    background-size: cover;
+    border-radius: 100%;
+    animation: loadingCircle 1s linear infinite;
+}
+
+div.zoom {
+    z-index: 3;
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+div.zoom.open {
+    display: flex;
+    opacity: 0;
+    animation: openZoom 0.2s forwards ease;
+    
+}
+
+div.zoom div#zoomContent {
+    transform: scale(50%);
+    opacity: 0;
+    animation: openZoom 0.2s forwards ease;
+}
+
+div.zoom div#zoomContent img {
+    display: block;
+    max-height: 80vh;
+    max-width: 90vw;
+}
+
+div.zoom a#openOriginal {
+    width: fit-content;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    line-height: 30px;
+    -webkit-transition: opacity .15s ease;
+    transition: opacity .15s ease;
+    opacity: .5;
+    margin: 0;
+}
+
+div.zoom a#openOriginal:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Elemento de texto */
+
+alpha-bold {
+    border: solid black 1px;
+    background-color: #23272a;
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+alpha-metion {
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 2px;
+    background-color: hsla(235,85.6%,64.7%,0.3);
+    color: hsl(236,83.3%,92.9%);
+    transition: background-color 50ms ease-out,color 50ms ease-out;
+}
+
+alpha-metion:hover {
+    background-color: hsla(235,85.6%,64.7%,1);
+    color: white;
+}
+
+code.box {
+    display: block;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #b9bbbe;
+    background-color: #202225;
+}
+
+code.box.content {
+    width: 95%;
+    border: 1px solid #202225;
+    background-color: #2f3136;
+}
+
+code.inline {
+    padding: 1px;
+    border-radius: 3px;
+    font-size: 85%;
+    background-color: #202225;
+}
+
+code.inline.content {
+    background-color: #202225;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+u {
+    text-decoration: underline;
+}
+
+b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}

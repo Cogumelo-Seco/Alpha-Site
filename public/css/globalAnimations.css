@@ -1,0 +1,12 @@
+@keyframes loadingCircle {    
+    to {
+        transform: rotateY(360deg)
+    }
+}
+
+@keyframes openZoom {
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}

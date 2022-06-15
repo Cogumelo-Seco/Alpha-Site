@@ -1,0 +1,158 @@
+alpha-bold.synonyms {
+    display: inline-flex;
+    margin: 2px;
+    height: 20px;
+    line-height: 20px;
+}
+
+nav#content {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    height: calc(100vh - (95px * 2));
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+h1#title {
+    font-size: 35px;
+    margin: 20px;
+}
+
+input#searchInput {
+    outline: none;
+    width: 25%;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--item-color-1);
+    box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+div.command {
+    padding: 10px 15px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 8px;
+    background-color: var(--item-color-1);
+    box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+p.commandName {
+    float: left;
+    border-bottom: solid #b27bf290 2px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+p.commandDescription {
+    font-size: 15px;
+    clear: both;
+    width: auto;
+    margin: 5px;
+    padding: 0;
+}
+
+div.command a.commandOpenInfos {
+    float: right;
+    margin-left: 5px;
+    margin-bottom: auto;
+    transition: all 0.4s;
+}
+
+div.command a.commandOpenInfos.up {
+    transform: rotateZ(-180deg);
+}
+
+div.command a.commandOpenInfos.up:hover {
+    transform: rotateZ(-180deg) translateY(3px);
+}
+
+div.command a.commandOpenInfos.down {
+    transform: rotateZ(0);
+}
+
+div.command a.commandOpenInfos.down:hover {
+    transform: rotateZ(0) translateY(3px);
+}
+
+div.command div.commandInfos {
+    display: none;
+    border-radius: 8px;
+    margin: 2px 0;
+    padding: 10px;
+    padding-top: 5px;
+    height: auto;
+    width: auto;
+    text-align: left;
+    background-color: var(--item-color-2);
+    border: solid black 2px;
+    opacity: 0;
+    animation: openCommandInfos 0.5s forwards;
+}
+
+span.commandInfosInfoName {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+span.commandInfosAlert {
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 100, 100);
+}
+
+span.commandInfosInfoDescription {
+    color: rgb(210, 210, 210);
+    margin-left: 15px;
+}
+
+img.commandExempleImage {
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    border: solid black 2px;
+}
+
+/* Painel lateral */
+
+div#controlPanel {
+    float: left;
+    background-color: var(--page-color-1);
+    border-right: 2px solid rgba(0, 0, 0, 0.733);
+    height: calc(100vh - (56px * 2));
+    width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+p.controlPanel-buttons {
+    cursor: pointer;
+    padding: 0 10px;
+    margin: 5px 0;
+    height: 35px;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+p.controlPanel-buttons a.categoryAmount {
+    float: right;
+}
+
+p.controlPanel-buttons:hover {
+    color: rgb(233, 166, 255);
+    transform: translateX(1px);
+}

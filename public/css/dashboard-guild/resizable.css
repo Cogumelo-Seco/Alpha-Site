@@ -1,0 +1,39 @@
+@media screen and (max-width:870px) {
+    .dashboardMessageEdit.Massage,
+    .dashboardMessageEdit.Panel,
+    .YTChannelsDisplay.List,
+    .YTChannelsDisplay.Contaner {
+        transform: translateY(0);
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width:445px) {
+    nav#dashboardContent {
+        max-height: 100%;
+    }
+    
+    div.embedThumbnail,
+    img.embedThumbnail {
+        width: 50px;
+        height: 50px;
+    }
+
+    span.embedAuthorName {
+        font-size: 0.675rem;
+    }
+
+    div.embedTitle {
+        font-size: 0.8rem;
+    }
+    
+    div.embedDescription {
+        font-size: 0.675rem;
+        line-height: 0.8rem;
+    }
+    
+    div.embedFooter {
+        font-size: 0.55rem;
+    }
+}

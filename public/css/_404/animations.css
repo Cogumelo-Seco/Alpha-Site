@@ -1,0 +1,22 @@
+@keyframes neon404 {
+    0%{
+        text-shadow:
+            0 0 5px #FF0000,
+            0 0 10px #FF0000,
+            0 0 20px #FF0000,
+            0 0 10px #FF0000,
+            0 0 0px #FF0000;
+    }
+    50%{
+        color: #920000;
+        text-shadow: 0 0 5px #5f0000;
+    }
+    100%{
+        text-shadow:
+            0 0 5px #FF0000,
+            0 0 10px #FF0000,
+            0 0 20px #FF0000,
+            0 0 10px #FF0000,
+            0 0 0px #FF0000;
+    }
+}
