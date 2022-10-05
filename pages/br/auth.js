@@ -41,8 +41,8 @@ const page = (props) => {
 
         function serverLogin(user) {
             require('../../lib/data').user = user;
-            require(`../../public/js/setUser.js`)([ user, null ])
-            require(`../../public/js/getUser.js`)([ cookie, socket ])
+            require(`../../public/js/setUser.js`).default([ user, null ])
+            require(`../../public/js/getUser.js`).default([ cookie, socket ])
 
             router.push(require('../../lib/data').page)
             setTimeout(() => router.push(require('../../lib/data').page), 1000)
