@@ -1,4 +1,4 @@
-module.exports = ([ cookie, socket, loadState, router, redirect ]) => {
+export default ([ cookie, socket, loadState, router, redirect ]) => {
     const userButtons = document.getElementsByClassName('user-button-image')
     const localUser = require('../../lib/data').user
     const language = document.URL.replace('https://', '').replace('http://', '').split('/')[1]

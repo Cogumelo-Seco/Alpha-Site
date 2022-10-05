@@ -1,4 +1,4 @@
-module.exports = ([ user, router ]) => {
+export default ([ user, router ]) => {
     const userButtons = document.getElementsByClassName('user-button-image')
     const language = document.URL.replace('https://', '').replace('http://', '').split('/')[1]
 

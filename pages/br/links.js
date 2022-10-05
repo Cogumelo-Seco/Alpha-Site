@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import io from 'socket.io-client';
 import Head from "next/head";
 
-const functions = (type, ...props) => require(`../../public/js/${type}.js`)(props)
+const functions = (type, ...props) => require(`../../public/js/${type}.js`).default(props)
 
 function pt(props) {
     let cookiesProps = require('../../lib/data').cookies
@@ -44,13 +44,17 @@ function pt(props) {
             <body>
                 <section>
                     <div>
-                        <div className="links" onClick={() => open('https://cogu-game.vercel.app')}>
-                            <img src="/imgs/links/snake.png" />
-                            <p>{props.language == 'pt' ? 'Jogo multiplayer: 100 Nome' : 'Multiplayer game: 100 Nome'}</p>
+                        <div className="links" onClick={() => open('https://cogu-fnf.vercel.app')}>
+                            <img src="/imgs/links/fnf.png" />
+                            <p>{props.language == 'pt' ? 'CoguFNF' : 'CoguFNF'}</p>
                         </div>
                         <div className="links" onClick={() => open('https://cogu-pacman.vercel.app')}>
                             <img src="/imgs/links/pac-man.png" />
                             <p>Pac-Man</p>
+                        </div>
+                        <div className="links" onClick={() => open('https://cogu-game.vercel.app')}>
+                            <img src="/imgs/links/snake.png" />
+                            <p>{props.language == 'pt' ? 'Jogo multiplayer: 100 Nome' : 'Multiplayer game: 100 Nome'}</p>
                         </div>
                         <div className="links" onClick={() => open('https://infinite-run.vercel.app')} >
                             <img src="/imgs/links/infinite-run.png" />

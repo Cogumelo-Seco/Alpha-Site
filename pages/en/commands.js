@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import io from 'socket.io-client';
 import Head from "next/head";
 
-const functions = (type, ...props) => require(`../../public/js/${type}.js`)(props)
+const functions = (type, ...props) => require(`../../public/js/${type}.js`).default(props)
 
 function page(props) {
     let cookiesProps = require('../../lib/data').cookies
