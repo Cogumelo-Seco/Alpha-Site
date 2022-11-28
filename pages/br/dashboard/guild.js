@@ -63,6 +63,7 @@ function page(props) {
                 const YTChannelsAddChannelInput = document.getElementById('YTChannelsAddChannelInput')
                 const YTChannelsAddChannelImage = document.getElementById('YTChannelsAddChannelImage')
                 const YTChannelsAddChannelName = document.getElementById('YTChannelsAddChannelName')
+                const YTChannelsAddChannelIdentifier = document.getElementById('YTChannelsAddChannelIdentifier')
                 const YTChannelsAddChannel = document.getElementById('YTChannelsAddChannel')
                 const YTChannelsList = document.getElementById('YTChannelsList');
 
@@ -358,9 +359,8 @@ function page(props) {
                     YTChannelToAdd = channelInfo
                     YTChannelsAddChannelImage.src = channelInfo.avatar ? channelInfo.avatar.thumbnails[0]?.url || 'https://www.youtube.com/s/desktop/6007d895/img/favicon_144x144.png' : 'https://www.youtube.com/s/desktop/6007d895/img/favicon_144x144.png'
                     YTChannelsAddChannelName.innerHTML = channelInfo.title
+                    YTChannelsAddChannelIdentifier.innerHTML = channelInfo.vanityChannelUrl.split('/')[channelInfo.vanityChannelUrl.split('/').length-1]
                 })
-
-                console.log(guild)
 
                 function replaces(text, type) {
                     if (!text) return
@@ -568,7 +568,10 @@ function page(props) {
                                                 <div className="YTChannelsDisplay Contaner">
                                                     <div id="YTChannelsAddChannelInfo">
                                                         <img className="image" id="YTChannelsAddChannelImage" src="/imgs/sticker-sla.png" />
-                                                        <span id="YTChannelsAddChannelName">????????</span>
+                                                        <div id="YTChannelInfo">
+                                                            <p id="YTChannelsAddChannelName">?????</p>
+                                                            <p id="YTChannelsAddChannelIdentifier">@?????</p>
+                                                        </div>
                                                     </div>
                                                     <input placeholder={props.language == 'pt' ? 'Link do canal ou ID' : 'Channel link or ID'} id="YTChannelsAddChannelInput" />
                                                     <button className="YTChannelsSearchButtons" id="YTChannelsSearchChannel" title={props.language == 'pt' ? 'Procurar canal' : 'Search'}>

@@ -373,6 +373,26 @@ table.placeholdersTable td {
     width: 50%;
 }
 
+/*div#YTChannelInfo {
+    height: 100px;
+    background-color: red;
+    word-break: break-all;
+    word-wrap: break-word;
+}*/
+
+div#YTChannelInfo p {
+    margin: 0;
+}
+
+p#YTChannelsAddChannelName {
+    font-size: 22px;
+}
+
+p#YTChannelsAddChannelIdentifier {
+    color: #aaa;
+    font-size: 13px;
+}
+
 img#YTChannelsYTIcon {
     margin: 0 7px;
     height: 21px;
