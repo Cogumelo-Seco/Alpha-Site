@@ -324,7 +324,11 @@ function page(props) {
                             YTChannel.id = `YTChannel-${channelId}`
                             YTChannel.innerHTML = `
                                 <img class="YTChannelImage" src="${channelAvatar}" />
-                                <span class="YTChannelName">${channelInfo.title || channelId}</span>
+                                <div id="YTChannelInfo">
+                                    <p id="YTChannelName">${channelInfo.title || channelId}</p>
+                                    <p id="YTChannelIdentifier">${channelInfo.vanityChannelUrl.split('/')[channelInfo.vanityChannelUrl.split('/').length-1]}</p>
+                                </div>
+                                
                                 <button class="YTChannelButton" id="YTChannelButton-${channelId}">X</button>
                             `
                             YTChannelsList.append(YTChannel)

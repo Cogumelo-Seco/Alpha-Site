@@ -382,6 +382,7 @@ table.placeholdersTable td {
 
 div#YTChannelInfo p {
     margin: 0;
+    text-align: left;
 }
 
 p#YTChannelsAddChannelName {
@@ -391,6 +392,11 @@ p#YTChannelsAddChannelName {
 p#YTChannelsAddChannelIdentifier {
     color: #aaa;
     font-size: 13px;
+}
+
+p#YTChannelIdentifier {
+    color: #aaa;
+    font-size: 10px;
 }
 
 img#YTChannelsYTIcon {
