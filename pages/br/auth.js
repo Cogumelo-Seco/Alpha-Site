@@ -21,20 +21,21 @@ const page = (props) => {
         let connect = false
         let time = 0
 
-        let text = document.getElementById('waitingText')
-
-        setInterval(() => {
-            if (text.innerText.split(' ')[1]?.length < 4 && !connect) text.innerText += '.'
-            else if (!connect) text.innerText = `${text.innerText.split(' ')[0]} .`
-            time += 1
-        }, 500)
+        const waitingText = document.getElementById('waitingText')
+        function addDot() {
+            if (!connect) {
+                waitingText.innerText += '.'
+                if (waitingText.innerText.length >= 15) waitingText.innerText = props.language == 'pt' ? 'Conectando.' : 'Connecting.'
+                setTimeout(addDot, 500)
+            }
+        }
+        addDot()
 
         function serverConnect() {
             let cookiesProps = require('../../lib/data').cookies
             let cookie = cookies(cookiesProps)
 
             connect = true
-            let waitingText = document.getElementById('waitingText')
             if (waitingText) waitingText.innerText = props.language == 'pt' ? 'Esperando confirmação, talvez seu navegador bloqueie o pop-up de login' : 'Waiting for confirmation, maybe your browser blocks the login popup'
             if (!cookie.userId) window.open(props.serv+'/api/auth', "discord-auth-window", `width=400px,height=700px,top=30px,left=20pxstatus=yes,scrollbars=yes,resizable=yes`)
         }
@@ -57,7 +58,7 @@ const page = (props) => {
 
             connect = false
             time = 0
-            document.getElementById('waitingText').innerText = props.language == 'pt' ? 'Conectando .' : 'Connecting .'
+            waitingText.innerText = props.language == 'pt' ? 'Conectando .' : 'Connecting .'
 
             socket = io(props.serv, {
                 withCredentials: true,

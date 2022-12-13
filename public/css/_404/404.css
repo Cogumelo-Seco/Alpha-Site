@@ -16,9 +16,10 @@ div#content {
 }
 
 #number{    
-    color: #681c1c;
+    color: #771d1d;
     font-size: 150px;
     font-family: 'Blut';
+    animation: txt404 5s ease-in-out infinite;
     /*animation: neon404 5s ease-in-out infinite;*/
 }
 

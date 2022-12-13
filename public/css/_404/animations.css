@@ -20,3 +20,25 @@
             0 0 0px #FF0000;
     }
 }
+
+@keyframes txt404 {
+    0%{
+        text-shadow:
+            0 0 5px #FF0000,
+            0 0 10px #FF0000,
+            0 0 20px #FF0000,
+            0 0 10px #FF0000,
+            0 0 0px #FF0000;
+    }
+    50%{
+        text-shadow: 0 0 5px transparent;
+    }
+    100%{
+        text-shadow:
+            0 0 5px #FF0000,
+            0 0 10px #FF0000,
+            0 0 20px #FF0000,
+            0 0 10px #FF0000,
+            0 0 0px #FF0000;
+    }
+}
