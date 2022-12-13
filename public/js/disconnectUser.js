@@ -7,7 +7,7 @@ export default ([ cookie, router ]) => {
 
     setTimeout(() => {
         for (let userButton of userButtons) {
-            userButton.src = 'https://cdn.discordapp.com/embed/avatars/0.png'
+            userButton.src = 'https://cdn.discordapp.com/embed/avatars/1.png'
             userButton.title = language == 'br' ? 'Desconectado' : 'Disconnected'
         }
 

@@ -28,6 +28,7 @@ div#userHeader {
 }
 
 img#userAvatar {
+    filter: grayscale(50%);
     width: 140px;
     margin-bottom: 5px;
     border-radius: 8px;

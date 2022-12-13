@@ -105,7 +105,6 @@ const page = (props) => {
                 <div id="waiting">
                     <div id="waitingText">{props.language == 'pt' ? 'Conectando .' : 'Connecting .'}</div>
                     <button className="waitingButton" id="reload">{props.language == 'pt' ? 'Tentar Novamente' : 'Try again'}</button><br />
-                    <img id="waitingImage" className="image" src={props.image} />
                 </div>
             </body>
         </html>
