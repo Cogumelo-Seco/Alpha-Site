@@ -18,7 +18,7 @@ function page(props) {
             withCredentials: true,
         })
 
-        document.getElementById('myInformations').style.backgroundColor = '#b27bf290';
+        document.getElementById('myInformations').style.backgroundColor = '#4C4C4C';
 
         function loadState(user) {
             /*user.bannerURL = 'https://cdn.discordapp.com/banners/561315445026586635/3822ba4bbbde691e616ef1bb8e8dfc83.png?size=512'
@@ -94,6 +94,17 @@ function page(props) {
                             marryInfoImg.title = spouse.id
                             marryInfoImg.src = spouse.avatarURL || spouse.defaultAvatarURL
                         } else marry.style.display = 'none'
+
+                        function loop() {
+                            let dashboardContentSeparation = document.getElementsByClassName('dashboardContentSeparation')[0]
+        
+                            let rAF = window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.requestAnimationFrame;
+                            if (dashboardContentSeparation) {
+                                dashboardContentSeparation.style.borderColor = colorBox.value; 
+                                rAF(loop)
+                            }
+                        }
+                        loop()
                     }
                 })
             }
@@ -127,7 +138,7 @@ function page(props) {
             <Head>
                 <title>Alpha Site | Dashboard my</title>
 
-                <meta property="theme-color" content="#8A2BE2" />
+                <meta property="theme-color" content="#010101" />
                 <meta property="og:title" content="Alpha Bot" />
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/dashboard/my" />                
@@ -176,7 +187,7 @@ function page(props) {
                                     <p id="marry">{props.language == 'pt' ? 'Casado(a) com' : 'Married with'}: 
                                         <alpha-bold id="marry-info">
                                             <span id="marry-info-name" />
-                                            <img className="image" id="marry-info-img" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+                                            <img className="image" id="marry-info-img" src="https://cdn.discordapp.com/embed/avatars/1.png" />
                                         </alpha-bold>
                                     </p>
                                 </p>

@@ -1,10 +1,21 @@
 body {
-    --body-background: rgb(38, 44, 50);
+    /*--body-background: rgb(38, 44, 50);
     --page-color-1: rgb(18, 24, 30);
     --item-color-1: rgb(24, 29, 39);
     --item-color-1-h: rgb(34, 39, 49);
     --item-color-2: rgb(68, 74, 85);
     --item-color-2-h: rgb(63, 69, 80);
     --item-button-color-1: rgb(39, 44, 55);
-    --item-button-color-1-h: rgb(49, 54, 65);
+    --item-button-color-1-h: rgb(49, 54, 65);*/
+    --body-background: rgb(36, 36, 36);
+    --page-color-1: rgb(10, 10, 10);
+    --page-border-color: rgb(30, 30, 30);
+    --item-color-1: rgb(25, 25, 25);
+    --item-color-1-h: rgb(40, 25, 25);
+    --item-color-2: rgb(54, 57, 63);
+    --item-color-2-h: rgb(69, 57, 63);
+    --item-color-3: #222222;
+    --item-color-3-h: #332222;
+    --item-button-color-1: rgb(55, 55, 55);
+    --item-button-color-1-h: rgb(70, 55, 55);
 }

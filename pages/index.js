@@ -9,7 +9,13 @@ const load = () => {
 
     const router = useRouter()
     useEffect(async () => {
-        document.getElementById('text-redirecting').innerText += '.'
+        const textRedirecting = document.getElementById('text-redirecting')
+        function addDot() {
+            textRedirecting.innerText += '.'
+            if (textRedirecting.innerText.length >= 20) textRedirecting.innerText = 'Redirecionando..'
+        }
+        setInterval(addDot, 500)
+        addDot()
         if (cookie && cookie.language == 'en') router.push('/en')
         else router.push('/br')
     })
@@ -18,7 +24,7 @@ const load = () => {
             <head>
                 <title>Redirecionando...</title>
 
-                <meta property="theme-color" content="#8A2BE2" />
+                <meta property="theme-color" content="#010101" />
                 <meta property="og:title" content="Alpha Bot" />
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/" />                

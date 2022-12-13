@@ -17,7 +17,7 @@ div#serverProps {
 div#serverHeader {
     background-color: var(--item-color-1);
     box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid black;
     padding: 1px;
     margin-bottom: 10px;
 }
@@ -29,7 +29,7 @@ img#guildIcon {
 }
 
 a#guildName {
-    background-color: #222731;
+    background-color: var(--item-color-3);
     padding: 3px;
     cursor: default;
 }
@@ -57,13 +57,13 @@ div.dashboardContentSeparation {
     border-radius: 8px;
     background-color: var(--item-color-1);
     box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid black;
     overflow: hidden;
 }
 
 p.dashboardContentTitle {
     float: left;
-    border-bottom: solid #b27bf290 2px;
+    border-bottom: solid #555555 2px;
     font-weight: bold;
     margin: 0;
     margin-top: 2px;
@@ -158,21 +158,21 @@ a.openContents.down:hover {
     outline: none;
     resize: vertical;
     width: 85%;
-    height: 20px;
+    height: auto;
     min-height: 20px;
     max-height: 200px;
     margin-bottom: 5px;
     padding: 4px;
     border-radius: 8px;
     color: white;
-    background-color: #222731;
+    background-color: var(--item-color-3);
     border: solid black 2px;
     transition: all 0.3s;
 }
 
 .dashboardMessageEdit.Panel textarea:focus,
 .dashboardMessageEdit.Panel input:focus {
-    background-color: #2c2f38;
+    background-color: var(--item-color-3-h);
 }
 
 input.inputColor {
@@ -358,7 +358,7 @@ table.placeholdersTable {
 }
 
 table.placeholdersTable tr.tableTitle {
-    color: rgb(233, 166, 255);
+    color: rgb(10, 10, 10);
     font-size: 22px;
     font-weight: bold;
     border-top: none
@@ -400,6 +400,7 @@ p#YTChannelIdentifier {
 }
 
 img#YTChannelsYTIcon {
+    filter: grayscale(100%);
     margin: 0 7px;
     height: 21px;
 }
@@ -441,11 +442,12 @@ div.YTChannel {
     width: calc(100%-10px);
     margin: 5px;
     color: white;
-    background-color: #222731;
+    background-color: var(--item-color-3);
     border: solid black 2px;
 }
 
 div.YTChannel img.YTChannelImage {
+    filter: grayscale(50%);
     cursor: pointer;
     border-radius: 100%;
     width: 40px;
@@ -465,13 +467,13 @@ div.YTChannel button.YTChannelButton {
     border-radius: 5px;
     font-size: 25px;
     color: white;
-    background-color: #383b44;
+    background-color: var(--item-color-2);
     border: none;
     transition: all 0.5s;
 }
 
 div.YTChannel button.YTChannelButton:hover {
-    background-color: #43464e;
+    background-color: var(--item-color-2-h);
 }
 
 div#YTChannelsAddChannelInfo {
@@ -495,27 +497,27 @@ input#YTChannelsAddChannelInput {
     padding: 4px;
     border-radius: 8px;
     color: white;
-    background-color: #222731;
+    background-color: var(--item-color-3);
     border: solid black 2px;
     transition: all 0.5s;
 }
 
 input#YTChannelsAddChannelInput:focus {
-    background-color: #2c2f38;
+    background-color: var(--item-color-3-h);
 }
 
 button.YTChannelsSearchButtons {
     margin-right: 5px;
     height: 30px;
     border-radius: 5px;
-    background-color: #222731;
+    background-color: var(--item-color-3);
     border: solid black 2px;
     color: white;
     transition: all 0.5s;
 }
 
 button.YTChannelsSearchButtons:hover {
-    background-color: #2c2f38;
+    background-color: var(--item-color-3-h);
 }
 
 button#YTChannelsSearchChannel {
@@ -549,7 +551,7 @@ img#YTChannelsSearchChannelButtonImage {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(255, 81, 81);
+    background-color: rgb(140, 50, 50);
     border: solid black 2px;
     -webkit-transition: .4s;
     transition: .4s;
@@ -574,7 +576,7 @@ img#YTChannelsSearchChannelButtonImage {
 }
 
 input:checked + .slider {
-    background-color: rgb(139, 255, 123);
+    background-color: rgb(77, 111, 73);
 }
 
 input:checked + .slider:before {

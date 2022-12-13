@@ -13,7 +13,7 @@ function page(props) {
     const router = useRouter()
 
     useEffect(() => {
-        document.getElementById('myGuilds').style.backgroundColor = '#b27bf290';
+        document.getElementById('myGuilds').style.backgroundColor = '#4C4C4C';
 
         const socket = io(props.serv, {
             withCredentials: true,
@@ -53,7 +53,7 @@ function page(props) {
                 document.getElementById('loadingCircle').style.display = 'none';
                 serverContents.style.display = 'inline-block';
                 if (guild.icon) guildIcon.src = `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png`;
-                else guildIcon.src = 'https://cdn.discordapp.com/embed/avatars/0.png'
+                else guildIcon.src = 'https://cdn.discordapp.com/embed/avatars/1.png'
                 guildName.innerText = guild.name
 
                 const selectServerLang = document.getElementById('selectServerLang');
@@ -368,14 +368,16 @@ function page(props) {
 
                 function replaces(text, type) {
                     if (!text) return
+                    if (type == 'color' && text == 'DEFAULT-COLOR') return text = '#000000'
+                    
                     text = text
                         .replace(/{guildMemberCount}/g, 13)
                         .replace(/{guildName}/g, guild.name)
-                        .replace(/{avatar}/g, '/imgs/avatar/Roxo.png')
-                        .replace(/{@member}/g, '<alpha-metion>@Alpha Bot</alpha-metion>')
-                        .replace(/{member}/g, 'Alpha Bot')
-                        .replace(/{memberTag}/g, 'Alpha Bot#8083')
-                        .replace(/{memberId}/g, '766006179209936946')
+                        .replace(/{avatar}/g, user.avatarURL || '/imgs/avatar/Default.png')
+                        .replace(/{@member}/g, `<alpha-metion>@${user.username}</alpha-metion>`)
+                        .replace(/{member}/g, user.username)
+                        .replace(/{memberTag}/g, user.tag)
+                        .replace(/{memberId}/g, user.id)
                         .replace(/{lv}/g, 13)
 
                     const re = /<code(?:\s[^>]*)?>[\s\S]*?<\/code>|`{3}([\S\s]*?)`{3}|`{2}([\S\s]*?)`{2}|`([^`]*)`|~~([\S\s]*?)~~|\*{2}([\s\S]*?)\*{2}(?!\*)|\*([^*]*)\*|__([\s\S]*?)__/g;
@@ -446,7 +448,7 @@ function page(props) {
             <Head>
                 <title>Alpha Site | Dashboard Guild</title>
 
-                <meta property="theme-color" content="#8A2BE2" />
+                <meta property="theme-color" content="#010101" />
                 <meta property="og:title" content="Alpha Bot" />
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/dashboard/guild" />                

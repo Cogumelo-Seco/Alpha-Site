@@ -19,7 +19,7 @@ div#userProps {
 div#userHeader {
     background-color: var(--item-color-1);
     box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid black;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 0 / 50%;
@@ -34,7 +34,7 @@ img#userAvatar {
 }
 
 a#userName {
-    background-color: #222731;
+    background-color: var(--item-color-3);
     padding: 3px;
     cursor: default;
 }
@@ -75,7 +75,7 @@ p.dashboardContentSeparation {
     border-radius: 8px;
     background-color: var(--item-color-1);
     box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid black;
 }
 
 p.dashboardContentSeparation p {

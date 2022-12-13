@@ -11,7 +11,7 @@ nav#dashboardContent {
 div#controlPanel {
     float: left;
     background-color: var(--page-color-1);
-    border-right: 2px solid rgba(0, 0, 0, 0.733);
+    border-right: 2px solid var(--page-border-color);
     height: calc(100vh - (56px * 2));
     width: 200px;
     overflow-y: auto;
@@ -31,7 +31,7 @@ p.controlPanel-buttons {
 }
 
 p.controlPanel-buttons:hover {
-    color: rgb(233, 166, 255);
+    color: rgb(170, 170, 170);
     transform: translateX(1px);
 }
 
@@ -40,7 +40,7 @@ p#disconnectUser {
 }
 
 p#disconnectUser:hover {
-    color: rgb(255, 50, 50);
+    color: rgb(185, 50, 50);
 }
 
 /* Botão Salvar */
@@ -56,21 +56,21 @@ div button#save-button {
     font-size: 20px;
     cursor: pointer;
     color: white;
-    background-color: rgba(178, 123, 242, 0.565);
+    background-color: rgba(100, 100, 100, 0.565);
     border: none;
     border-radius: 8px;
     transition: all 0.5s;  
 }
 
 div button#save-button:hover {
-    color: rgb(233, 166, 255);
+    background-color: rgba(150, 100, 100, 0.565);
     transform: translateY(-1px);
 }
 
 @media screen and (max-width:700px) {
     div#controlPanel {
         border-right: 0;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.733);
+        border-bottom: 2px solid var(--page-border-color);
         float: none;
         width: 100%;
         height: auto;

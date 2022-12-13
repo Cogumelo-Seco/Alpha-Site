@@ -14,7 +14,7 @@ const load = () => {
     return (
         <html lang="pt-BR">
             <head>
-                <meta property="theme-color" content="#8A2BE2" />
+                <meta property="theme-color" content="#010101" />
                 <meta property="og:title" content="Alpha Bot" />
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/" />                

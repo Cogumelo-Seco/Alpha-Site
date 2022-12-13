@@ -29,7 +29,7 @@ input#searchInput {
     color: white;
     background-color: var(--item-color-1);
     box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid black;
 }
 
 div.command {
@@ -39,12 +39,12 @@ div.command {
     border-radius: 8px;
     background-color: var(--item-color-1);
     box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.6);
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid black;
 }
 
 p.commandName {
     float: left;
-    border-bottom: solid #b27bf290 2px;
+    border-bottom: solid #555555 2px;
     font-weight: bold;
     margin: 0;
     margin-bottom: 5px;
@@ -128,13 +128,12 @@ img.commandExempleImage {
 div#controlPanel {
     float: left;
     background-color: var(--page-color-1);
-    border-right: 2px solid rgba(0, 0, 0, 0.733);
+    border-right: 2px solid var(--page-border-color);
     height: calc(100vh - (56px * 2));
     width: 200px;
     overflow-y: auto;
     overflow-x: hidden;
 }
-
 
 p.controlPanel-buttons {
     cursor: pointer;
@@ -153,6 +152,6 @@ p.controlPanel-buttons a.categoryAmount {
 }
 
 p.controlPanel-buttons:hover {
-    color: rgb(233, 166, 255);
+    color: rgb(170, 170, 170);
     transform: translateX(1px);
 }

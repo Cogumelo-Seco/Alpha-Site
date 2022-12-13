@@ -60,7 +60,7 @@ function App({ Component, pageProps }) {
 
             <div id="zoom" className="zoom" onClick={(e) => e.target.id == 'zoom' ? e.target.classList.toggle('open') : null}>
                 <div id="zoomContent">
-                    <img id="zoomImage" src="http://localhost:3000/imgs/avatar/Roxo.png" />
+                    <img id="zoomImage" src="http://localhost:3000/imgs/avatar/Default.png" />
                     <a id="openOriginal" target="_blank">{pageProps.language == 'pt' ? 'Abrir Original' : 'Open original'}</a>
                 </div>
             </div>
@@ -69,7 +69,7 @@ function App({ Component, pageProps }) {
                 <ul>
                     <li id="alpha-image">
                         <Link href={pageProps.language == 'pt' ? '/br' : '/en'}>
-                            <img src="/imgs/avatar/Roxo.png" />
+                            <img src="/imgs/avatar/Default.png" />
                         </Link>
                     </li>
 
@@ -114,7 +114,7 @@ function App({ Component, pageProps }) {
 
                     <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+"/dashboard/my"} >
                         <li className="user-button header" title={pageProps.language == 'pt' ? 'Desconectado' : 'Disconnected'}>
-                            <img className="user-button-image" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+                            <img className="user-button-image" src="https://cdn.discordapp.com/embed/avatars/1.png" />
                         </li>
                     </Link>
                 </ul>
@@ -127,7 +127,7 @@ function App({ Component, pageProps }) {
 
                     <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+"/dashboard/my"} >
                         <li className="user-button login-exit" title={pageProps.language == 'pt' ? 'Desconectado' : 'Disconnected'} href={(pageProps.language == 'pt' ? '/br' : '/en')+"/dashboard/my"} >
-                            <img className="user-button-image" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+                            <img className="user-button-image" src="https://cdn.discordapp.com/embed/avatars/1.png" />
                         </li> 
                     </Link>                   
 
@@ -154,7 +154,7 @@ function App({ Component, pageProps }) {
             </CookiesProvider>
 
             <footer>
-                <p onClick={() => open('https://github.com/Cogumelo-Seco')} >{pageProps.language == 'pt' ? 'Feito por Cogumelo ^^' : 'Made by Cogumelo ^^'}</p>
+                <p onClick={() => open('https://github.com/Cogumelo-Seco')} >{pageProps.language == 'pt' ? 'Feito por Cogu' : 'Made by Cogu'}</p>
                 <img className="topGG" src="https://top.gg/api/widget/servers/766006179209936946.svg?noavatar=true" onClick={() => open('https://top.gg/bot/766006179209936946')} />
                 <img className="topGG" src="https://top.gg/api/widget/upvotes/766006179209936946.svg?noavatar=true" onClick={() => open('https://top.gg/bot/766006179209936946')} />
             </footer>

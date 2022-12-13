@@ -2,7 +2,7 @@ footer {
     display: block;
     text-align: center;
     background-color: var(--page-color-1);
-    border-top: 2px solid rgba(0, 0, 0, 0.733);
+    border-top: 2px solid var(--page-border-color);
     color: white;
     position: fixed;
     bottom: 0;

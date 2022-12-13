@@ -64,7 +64,7 @@ function page(props) {
         function tableConstruction(ElementId) {
             let Element = document.getElementById(ElementId)
             for (let Element of controlPanelButtons) Element.style.backgroundColor = 'transparent'
-            Element.style.backgroundColor = '#b27bf290'
+            Element.style.backgroundColor = '#4C4C4C'
 
             let json = list[Element.id]
 
@@ -164,7 +164,7 @@ function page(props) {
             <Head>
                 <title>Alpha Site | {props.language == 'pt' ? 'Comandos' : 'Commands'}</title>
 
-                <meta property="theme-color" content="#8A2BE2" />
+                <meta property="theme-color" content="#010101" />
                 <meta property="og:title" content="Alpha Bot" />
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/commands" />                
