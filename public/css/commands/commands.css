@@ -90,7 +90,7 @@ div.command div.commandInfos {
     height: auto;
     width: auto;
     text-align: left;
-    background-color: var(--item-color-2);
+    background-color: var(--item-color-4);
     border: solid black 2px;
     opacity: 0;
     animation: openCommandInfos 0.5s forwards;
@@ -115,6 +115,7 @@ span.commandInfosInfoDescription {
 }
 
 img.commandExempleImage {
+    filter: grayscale(50%);
     cursor: pointer;
     margin-top: 10px;
     width: 100%;

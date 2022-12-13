@@ -57,7 +57,7 @@ function page(props) {
             }
         } else title.innerText = `ERROR: ${props.list.error}`
 
-        document.addEventListener('keypress', () => {
+        document.addEventListener('keyup', () => {
             tableConstruction(document.getElementById(currentCategory).id)
         })
 
