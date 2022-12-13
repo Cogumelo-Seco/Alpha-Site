@@ -123,6 +123,7 @@ img#languagePTFlag {
 }
 
 img.languageFlag {
+    filter: grayscale(50%);
     margin-right: 5px;
     display: inline-block;
     width: 30px;
