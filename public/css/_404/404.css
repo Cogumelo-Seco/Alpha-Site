@@ -16,9 +16,10 @@ div#content {
 }
 
 #number{    
-    color: #FF0000;
+    color: #681c1c;
     font-size: 150px;
-    animation: neon404 5s ease-in-out infinite;
+    font-family: 'Blut';
+    /*animation: neon404 5s ease-in-out infinite;*/
 }
 
 #err-main-button {
@@ -34,5 +35,5 @@ div#content {
 }
 
 #err-main-button:hover {
-    background-color: #1c1c1c;
+    background-color: #3d2d2d;
 }

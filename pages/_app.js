@@ -38,6 +38,7 @@ function App({ Component, pageProps }) {
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/colors.css" />
+                <link rel="stylesheet" href="/css/fonts.css" />
                 <link rel="stylesheet" href="/css/reset.css" />
 
                 <link rel="stylesheet" type="text/css" href="/css/nprogress.css" />
