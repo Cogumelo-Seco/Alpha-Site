@@ -65,6 +65,7 @@ div.zoom div#zoomContent {
 }
 
 div.zoom div#zoomContent img {
+    filter: grayscale(50%);
     display: block;
     max-height: 80vh;
     max-width: 90vw;
