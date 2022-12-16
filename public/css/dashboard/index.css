@@ -31,7 +31,7 @@ p.controlPanel-buttons {
 }
 
 p.controlPanel-buttons:hover {
-    color: rgb(170, 170, 170);
+    color: rgb(255, 170, 170);
     transform: translateX(1px);
 }
 

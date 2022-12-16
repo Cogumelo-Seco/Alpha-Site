@@ -29,9 +29,13 @@ function page(props) {
             socket.on('passed', () => alert(props.language == 'pt' ? 'Configurações salvas!' : 'Saved settings!'))
             socket.on('error', (msg) => alert(`ERROR: ${msg}`))
 
-            if (!user.guilds) return
+            if (!user.guilds || !router.query.id) return
             let guild = user.guilds.find((g) => g.id == router.query.id);
-            if (!guild) return
+            if (!guild) {
+                router.push(require('../../../lib/data').page || '/')
+                alert('Permission denied')
+                return
+            }
 
             socket.emit('dashboard', { 
                 type: 'get-guild',

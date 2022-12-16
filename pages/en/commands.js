@@ -11,7 +11,7 @@ function page(props) {
     let cookie = cookies(cookiesProps)
 
     const router = useRouter()
-    require('../../lib/data').page = '/br/commands'
+    require('../../lib/data').page = (props.language == 'pt' ? '/br' : '/en')+'/br/commands'
 
     useEffect(() => {
         const socket = io(props.serv, {
@@ -34,7 +34,9 @@ function page(props) {
         let list = {}
         let currentCategory = null
 
-        if (!props.list.error) {
+        if (props.list.error != undefined) {
+            title.innerText = `ERROR: ${props.list.error}`
+        } else {
             list['All'] = []
 
             for (let categoryName in props.list) list[categoryName] = props.list[categoryName]
@@ -55,7 +57,7 @@ function page(props) {
                 controlPanel.appendChild(category)
                 if (listElemet.innerHTML == '') tableConstruction(category.id)
             }
-        } else title.innerText = `ERROR: ${props.list.error}`
+        } 
 
         document.addEventListener('keyup', () => {
             tableConstruction(document.getElementById(currentCategory).id)
@@ -193,16 +195,21 @@ export async function getStaticProps() {
     let serv = process.env.SERVER
     let secretApi = process.env.SECRET_API;
     
-    let body = await fetch(secretApi+'/commands')
-    .then((body) => { return body.json() }).catch((err) => { 
-        return {
-            error: err.type
-        }
-    })
+    let body = { error: null }
+    try {
+        body = await fetch(secretApi+'/commands').catch((err) => { 
+            return {
+                error: err.type
+            }
+        })
+        if (body && body.error == undefined) body = await body.json()
+    } catch (err) {
+        body = { error: err }
+    }
 
     return {
         props: {
-            list: body,
+            list: body || { error: null },
             serv,
             botInvite,
             languageChangeLink: '/commands',

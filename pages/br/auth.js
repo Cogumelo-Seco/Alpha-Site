@@ -12,7 +12,7 @@ const page = (props) => {
 
     useEffect(() => {
         let user = require('../../lib/data').user
-        if (user.id) return router.push(require('../../lib/data').page)
+        if (user.id) return router.push(require('../../lib/data').page || '/')
 
         let socket = io(props.serv, {
             withCredentials: true,
@@ -22,12 +22,17 @@ const page = (props) => {
         let time = 0
 
         const waitingText = document.getElementById('waitingText')
+        const reloadButton = document.getElementById('reload')
+
         function addDot() {
+            time += 1
             if (!connect) {
                 waitingText.innerText += '.'
                 if (waitingText.innerText.length >= 15) waitingText.innerText = props.language == 'pt' ? 'Conectando.' : 'Connecting.'
-                setTimeout(addDot, 500)
             }
+
+            reloadButton.innerText = `${props.language == 'pt' ? 'Tentar Novamente' : 'Try again'} ${5-time <= 0 ? '' : `- ${5-time}`}`
+            setTimeout(addDot, 1000)
         }
         addDot()
 
@@ -41,19 +46,20 @@ const page = (props) => {
         }
 
         function serverLogin(user) {
+            console.log(user)
             require('../../lib/data').user = user;
             require(`../../public/js/setUser.js`).default([ user, null ])
             require(`../../public/js/getUser.js`).default([ cookie, socket ])
 
-            router.push(require('../../lib/data').page)
-            setTimeout(() => router.push(require('../../lib/data').page), 1000)
+            router.push(require('../../lib/data').page || '/')
+            setTimeout(() => router.push(require('../../lib/data').page || '/'), 1000)
         }
         
         socket.emit('auth')
         socket.on('connect', serverConnect)
         socket.on('login', serverLogin)
 
-        document.getElementById('reload').addEventListener('click', () => {
+        reloadButton.addEventListener('click', () => {
             if (time <= 5) return
 
             connect = false

@@ -3,7 +3,8 @@
 }
 
 #nprogress .bar {
-    background: rgb(92, 92, 92);
+    background-image: linear-gradient(to right, rgb(150, 150, 150), rgb(90, 90, 90));
+    /*linear-gradient(left to right, rgb(92, 92, 92), rgb(29, 29, 29));*/
 
     position: fixed;
     z-index: 1031;
@@ -13,7 +14,7 @@
     width: 100%;
     height: 2px;
 }
-
+/*
 #nprogress .peg {
     display: block;
     position: absolute;
@@ -26,4 +27,4 @@
     -webkit-transform: rotate(3deg) translate(0px, -4px);
     -ms-transform: rotate(3deg) translate(0px, -4px);
     transform: rotate(3deg) translate(0px, -4px);
-}
+}*/

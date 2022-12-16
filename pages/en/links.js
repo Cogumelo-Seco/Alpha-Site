@@ -10,7 +10,7 @@ function pt(props) {
     let cookiesProps = require('../../lib/data').cookies
     let cookie = cookies(cookiesProps)
 
-    require('../../lib/data').page = '/br'
+    require('../../lib/data').page = (props.language == 'pt' ? '/br' : '/en')
     const router = useRouter()
 
     useEffect(() => {

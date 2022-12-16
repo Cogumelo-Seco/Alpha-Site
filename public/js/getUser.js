@@ -6,6 +6,7 @@ export default ([ cookie, socket, loadState, router, redirect ]) => {
 
 
     function configureUser(user) {
+        console.log(user)
         if (!user.guilds && loadState) return loadState(user)
         for (let i in user.guilds) user.guilds[i].DBGuild = null
 
@@ -29,7 +30,7 @@ export default ([ cookie, socket, loadState, router, redirect ]) => {
                 }
             }
         })
-    }    
+    }
 
     if (localUser.id) configureUser(localUser)
     else if (cookie.userId) {        

@@ -108,7 +108,7 @@ alpha-metion {
     padding: 0 2px;
     background-color: hsla(235,85.6%,64.7%,0.3);
     color: hsl(236,83.3%,92.9%);
-    transition: background-color 50ms ease-out,color 50ms ease-out;
+    transition: background-color 50ms ease-out, color 50ms ease-out;
 }
 
 alpha-metion:hover {
