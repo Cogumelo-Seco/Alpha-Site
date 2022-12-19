@@ -66,7 +66,7 @@ function page(props) {
         function tableConstruction(ElementId) {
             let Element = document.getElementById(ElementId)
             for (let Element of controlPanelButtons) Element.style.backgroundColor = 'transparent'
-            Element.style.backgroundColor = '#4C4C4C'
+            Element.style.backgroundColor = '#4C4C5F'
 
             let json = list[Element.id]
 

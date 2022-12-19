@@ -153,6 +153,6 @@ p.controlPanel-buttons a.categoryAmount {
 }
 
 p.controlPanel-buttons:hover {
-    color: rgb(255, 170, 170);
+    color: rgb(170, 170, 200);
     transform: translateX(1px);
 }

@@ -52,7 +52,7 @@ function pt(props) {
                             <img src="/imgs/links/pac-man.png" />
                             <p>Pac-Man</p>
                         </div>
-                        <div className="links" onClick={() => open('https://cogu-game.vercel.app')}>
+                        <div className="links" onClick={() => open('https://cogu-game-snake.vercel.app')}>
                             <img src="/imgs/links/snake.png" />
                             <p>{props.language == 'pt' ? 'Jogo multiplayer: 100 Nome' : 'Multiplayer game: 100 Nome'}</p>
                         </div>

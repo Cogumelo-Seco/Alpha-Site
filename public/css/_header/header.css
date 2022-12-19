@@ -58,7 +58,7 @@ header ul li a {
 
 header ul li.header-buttons:hover,
 header ul li a:hover {
-    color: rgb(255, 170, 170);
+    color: rgb(170, 170, 200);
     transform: translateY(0.5px);
 }
 
@@ -111,7 +111,7 @@ li {
 
 li#languagePT:hover, 
 li#languageEN:hover {
-    color: rgb(255, 170, 170);
+    color: rgb(170, 170, 200);
 }
 
 img#lang-image:hover {
@@ -173,7 +173,7 @@ div#mobile-header li a {
 
 div#mobile-header li a:hover,
 div#mobile-header li:hover {
-    color: rgb(255, 170, 170);
+    color: rgb(170, 170, 200);
     transform: translateX(1px);
 }
 
