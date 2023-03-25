@@ -1,13 +1,18 @@
 body {
-    /*--body-background: rgb(38, 44, 50);
-    --page-color-1: rgb(18, 24, 30);
+    --body-background: rgb(38, 44, 50);
+    --page-border-color: rgb(0, 0, 0);
+    --page-color-1: rgb(13, 19, 25);
     --item-color-1: rgb(24, 29, 39);
     --item-color-1-h: rgb(34, 39, 49);
     --item-color-2: rgb(68, 74, 85);
     --item-color-2-h: rgb(63, 69, 80);
+    --item-color-3: rgb(30, 31, 38);
+    --item-color-3-h: rgb(36, 36, 48);
+    --item-color-4: rgb(47, 52, 60);
+    --item-color-4-h: rgb(55, 55, 75);
     --item-button-color-1: rgb(39, 44, 55);
-    --item-button-color-1-h: rgb(49, 54, 65);*/
-    --body-background: rgb(45, 45, 45);
+    --item-button-color-1-h: rgb(49, 54, 65);
+    /*--body-background: rgb(45, 45, 45);
     --page-color-1: rgb(10, 10, 10);
     --page-border-color: rgb(30, 30, 30);
     --item-color-1: rgb(25, 25, 25);
@@ -19,5 +24,5 @@ body {
     --item-color-4: rgb(60, 60, 60);
     --item-color-4-h: rgb(55, 55, 75);
     --item-button-color-1: rgb(55, 55, 55);
-    --item-button-color-1-h: rgb(40, 40, 70);
+    --item-button-color-1-h: rgb(40, 40, 70);*/
 }

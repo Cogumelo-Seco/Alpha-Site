@@ -18,7 +18,7 @@ function page(props) {
             withCredentials: true,
         })
 
-        document.getElementById('myInformations').style.backgroundColor = '#4C4C5F';
+        document.getElementById('myInformations').style.backgroundColor = '#b27bf290';
 
         function loadState(user) {
             /*user.bannerURL = 'https://cdn.discordapp.com/banners/561315445026586635/3822ba4bbbde691e616ef1bb8e8dfc83.png?size=512'

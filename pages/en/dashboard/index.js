@@ -13,7 +13,7 @@ function page(props) {
     const router = useRouter()
 
     useEffect(() => {
-        document.getElementById('myGuilds').style.backgroundColor = '#4C4C5F';
+        document.getElementById('myGuilds').style.backgroundColor = '#b27bf290';
         
         const socket = io(props.serv, {
             withCredentials: true,

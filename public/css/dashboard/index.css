@@ -31,7 +31,7 @@ p.controlPanel-buttons {
 }
 
 p.controlPanel-buttons:hover {
-    color: rgb(170, 170, 200);
+    color: rgb(233, 166, 255);
     transform: translateX(1px);
 }
 
@@ -45,7 +45,7 @@ p#disconnectUser:hover {
 
 /* Botão Salvar */
 
-div button#save-button {
+/*div button#save-button {
     display: none;
     position: fixed;
     z-index: 1;
@@ -56,14 +56,31 @@ div button#save-button {
     font-size: 20px;
     cursor: pointer;
     color: white;
-    background-color: rgba(100, 100, 100, 0.565);
+    background-color: rgba(178, 123, 242, 0.565);
     border: none;
     border-radius: 8px;
     transition: all 0.5s;  
+}*/
+
+div button#save-button {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    right: 10px;
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(178, 123, 242, 0.565);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s;
 }
 
 div button#save-button:hover {
-    background-color: rgba(80, 80, 140, 0.565);
+    background-color: rgba(233, 166, 255, 0.565);
     transform: translateY(-1px);
 }
 

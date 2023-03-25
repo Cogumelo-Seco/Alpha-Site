@@ -46,7 +46,11 @@ function pt(props) {
                     <div>
                         <div className="links" onClick={() => open('https://cogu-fnf.vercel.app')}>
                             <img src="/imgs/links/fnf.png" />
-                            <p>{props.language == 'pt' ? 'CoguFNF' : 'CoguFNF'}</p>
+                            <p>CoguFNF</p>
+                        </div>
+                        <div className="links" onClick={() => open('https://cogu-projects.vercel.app/')}>
+                            <img src="/imgs/links/IA.png" />
+                            <p>{props.language == 'pt' ? 'IA' : 'AI'}</p>
                         </div>
                         <div className="links" onClick={() => open('https://cogu-pacman.vercel.app')}>
                             <img src="/imgs/links/pac-man.png" />

@@ -44,7 +44,7 @@ div.command {
 
 p.commandName {
     float: left;
-    border-bottom: solid #555555 2px;
+    border-bottom: solid #b27bf290 2px;
     font-weight: bold;
     margin: 0;
     margin-bottom: 5px;
@@ -115,7 +115,6 @@ span.commandInfosInfoDescription {
 }
 
 img.commandExempleImage {
-    filter: grayscale(50%);
     cursor: pointer;
     margin-top: 10px;
     width: 100%;
@@ -153,6 +152,6 @@ p.controlPanel-buttons a.categoryAmount {
 }
 
 p.controlPanel-buttons:hover {
-    color: rgb(170, 170, 200);
+    color: rgb(233, 166, 255);
     transform: translateX(1px);
 }

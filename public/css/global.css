@@ -9,12 +9,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #717171;
+    background: #575757;
     border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #575757;
+    background: #717171;
 }
 
 /* Circulo de Carregando */
@@ -65,7 +65,6 @@ div.zoom div#zoomContent {
 }
 
 div.zoom div#zoomContent img {
-    filter: grayscale(50%);
     display: block;
     max-height: 80vh;
     max-width: 90vw;

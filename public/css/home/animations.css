@@ -1,5 +1,5 @@
 @keyframes addButtonHover {
-    0%{
+    /*0%{
         background-color: #3d2d2d;
         box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.7);
         font-size: 20px;
@@ -11,6 +11,21 @@
     }
     100%{
         background-color: #3d2d2d;
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.7);
+        font-size: 20px;
+    }*/
+    0%{
+        background-color: #9a4af590;
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.7);
+        font-size: 20px;
+    }
+    50%{
+        background-color: #a968f390;
+        box-shadow: 0 20px 15px 0px rgba(0, 0, 0, 0.3);
+        font-size: 20.5px;
+    }
+    100%{
+        background-color: #9a4af590;
         box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.7);
         font-size: 20px;
     }

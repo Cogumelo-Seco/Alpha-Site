@@ -58,7 +58,7 @@ header ul li a {
 
 header ul li.header-buttons:hover,
 header ul li a:hover {
-    color: rgb(170, 170, 200);
+    color: rgb(233, 166, 255);
     transform: translateY(0.5px);
 }
 
@@ -111,7 +111,7 @@ li {
 
 li#languagePT:hover, 
 li#languageEN:hover {
-    color: rgb(170, 170, 200);
+    color: rgb(233, 166, 255);
 }
 
 img#lang-image:hover {
@@ -123,7 +123,6 @@ img#languagePTFlag {
 }
 
 img.languageFlag {
-    filter: grayscale(50%);
     margin-right: 5px;
     display: inline-block;
     width: 30px;
@@ -173,7 +172,7 @@ div#mobile-header li a {
 
 div#mobile-header li a:hover,
 div#mobile-header li:hover {
-    color: rgb(170, 170, 200);
+    color: rgb(233, 166, 255);
     transform: translateX(1px);
 }
 
