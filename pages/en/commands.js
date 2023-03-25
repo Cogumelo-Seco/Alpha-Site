@@ -53,7 +53,10 @@ function page(props) {
                     <a class="categoryName">${props.language == 'pt' ? translate(categoryName) : categoryName}</a>
                     <a class="categoryAmount">${list[categoryName].length}</a>
                 `
-                category.addEventListener('click', (event) => tableConstruction((event.path.filter(e => e.id))[0].id))
+                category.addEventListener('click', (event) => {
+                    tableConstruction(category.id)
+                    //tableConstruction((event.path.filter(e => e.id))[0].id)
+                })
                 controlPanel.appendChild(category)
                 if (listElemet.innerHTML == '') tableConstruction(category.id)
             }
