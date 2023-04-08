@@ -3,3 +3,15 @@
         opacity: 1;
     }
 }
+
+@keyframes commandOpenInfos {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #b27bf23c;
+    }
+    100% {
+        background-color: transparent;
+    }
+}

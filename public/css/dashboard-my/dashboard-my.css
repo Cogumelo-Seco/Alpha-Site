@@ -90,17 +90,21 @@ p#marry {
 alpha-bold#marry-info {
     display: flex;
     margin-left: 5px;
+    padding: 2px 6px;
 }
 
-alpha-bold#marry-info-name {
-    vertical-align: middle;
+span#marry-info-name {
+    display: block;
+    margin: auto 0;
 }
 
 img#marry-info-img {
     object-fit: contain;
     width: 30px;
     border-radius: 100%;
-    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(30, 30, 30);
+    border: solid black 1px;
 }
 
 textarea#aboutme-box {

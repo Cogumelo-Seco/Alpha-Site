@@ -63,6 +63,8 @@ div.command a.commandOpenInfos {
     margin-left: 5px;
     margin-bottom: auto;
     transition: all 0.4s;
+    border-radius: 100%;
+    animation: commandOpenInfos 1s linear infinite;
 }
 
 div.command a.commandOpenInfos.up {

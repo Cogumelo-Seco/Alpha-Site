@@ -186,8 +186,8 @@ function page(props) {
                                     <p>{props.language == 'pt' ? 'Comandos usados' : 'Used commands'}: <alpha-bold id="counter-info" /></p>
                                     <p id="marry">{props.language == 'pt' ? 'Casado(a) com' : 'Married with'}: 
                                         <alpha-bold id="marry-info">
-                                            <span id="marry-info-name" />
                                             <img className="image" id="marry-info-img" src="https://cdn.discordapp.com/embed/avatars/1.png" />
+                                            <span id="marry-info-name" />
                                         </alpha-bold>
                                     </p>
                                 </p>
