@@ -44,9 +44,9 @@ function pt(props) {
             <body>
                 <section>
                     <div>
-                        <div className="links" onClick={() => open('https://cogu-fnf.vercel.app')}>
+                        <div className="links" onClick={() => open('https://funcog.vercel.app/')}>
                             <img src="/imgs/links/fnf.png" />
-                            <p>CoguFNF</p>
+                            <p>FunCog</p>
                         </div>
                         <div className="links" onClick={() => open('https://cogu-projects.vercel.app/')}>
                             <img src="/imgs/links/IA.png" />
