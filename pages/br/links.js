@@ -52,7 +52,7 @@ function pt(props) {
                             <img src="/imgs/links/IA.png" />
                             <p>{props.language == 'pt' ? 'IA' : 'AI'}</p>
                         </div>
-                        <div className="links" onClick={() => open('https://cogu-pacman.vercel.app')}>
+                        <div className="links" onClick={() => open('https://cogu-projects.vercel.app/pac-man')}>
                             <img src="/imgs/links/pac-man.png" />
                             <p>Pac-Man</p>
                         </div>
@@ -63,6 +63,10 @@ function pt(props) {
                         <div className="links" onClick={() => open('https://infinite-run.vercel.app')} >
                             <img src="/imgs/links/infinite-run.png" />
                             <p>{props.language == 'pt' ? 'Beta do 1º jogo do meu criador no navegador: Infinite Run' : 'Beta: Infinite Run'}</p>
+                        </div>
+                        <div className="links" onClick={() => open('https://cogu-projects.vercel.app/pac-man')}>
+                            <img src="/imgs/links/minesweeper.png" />
+                            <p>{props.language == 'pt' ? 'Campo Minado' : 'Minesweeper'}</p>
                         </div>
                         <div className="links" onClick={() => open('https://cogu-fogo-do-doom.vercel.app/')} >
                             <img src="/imgs/links/fire-of-doom.png" />
