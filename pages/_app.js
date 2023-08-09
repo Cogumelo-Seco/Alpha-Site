@@ -33,7 +33,7 @@ function App({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <link rel="shortcut icon" href="/imgs/favicon.ico" />
+                <link rel="shortcut icon" href="/imgs/Cogu-avatar/Default.png" />
                 <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
             </Head>
             <head>
