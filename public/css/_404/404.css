@@ -20,10 +20,12 @@ div#content {
     font-size: 150px;
     font-family: 'Blut';
     animation: txt404 5s ease-in-out infinite;
+    margin: 5px;
+    margin-bottom: 15px;
     /*animation: neon404 5s ease-in-out infinite;*/
 }
 
-#err-main-button {
+.button {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.7);
     background-color: #2d2d2d;
     color: white;
@@ -32,9 +34,35 @@ div#content {
     border-radius: 8px;
     padding: 5px 30px 5px;
     font-size: 15px;
-    transition: all 0.5s;
+    transition: all 0.2s;
+    margin: 50px 5px;
 }
 
-#err-main-button:hover {
+.button:hover {
     background-color: #3d2d2d;
+}
+
+
+
+#gameContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: black;
+    display: none;
+}
+
+#gameHUD {
+    padding: 5px;
+    background-color: rgb(22, 22, 22);
+}
+
+#gameCanvas {
+    /*position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);*/
+    width: 60vh;
+    height: 60vh;
 }
