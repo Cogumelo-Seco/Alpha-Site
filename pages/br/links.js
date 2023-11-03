@@ -62,7 +62,7 @@ function pt(props) {
                         </div>
                         <div className="links" onClick={() => open('https://infinite-run.vercel.app')} >
                             <img src="/imgs/links/infinite-run.png" />
-                            <p>{props.language == 'pt' ? 'Beta do 1º jogo do meu criador no navegador: Infinite Run' : 'Beta: Infinite Run'}</p>
+                            <p>{props.language == 'pt' ? 'Infinite Run' : 'Infinite Run'}</p>
                         </div>
                         <div className="links" onClick={() => open('https://cogu-projects.vercel.app/minesweeper')}>
                             <img src="/imgs/links/minesweeper.png" />
