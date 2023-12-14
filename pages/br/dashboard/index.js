@@ -19,21 +19,34 @@ function page(props) {
             withCredentials: true,
         })
         
-        function loadState(user) {
+        function loadState(user, complete) {
             functions('setUser', user, router)
             
-            if (user.guilds) {
+            //if (!complete) return
+
+            if (user.guilds && !complete) {
                 let guilds = user.guilds
                 socket.emit('dashboard', {
                     type: 'get-guilds',
                     guilds: guilds,
+                    noUserConfig: true,
                     user
                 })
 
-                socket.on('dashboard-guilds-return', (props) => {
-                    listGuilds(props)
+                socket.on('dashboard-guilds-return', (serverProps) => {
+                    listGuilds(serverProps)
                 })
-            } else router.push(`/${props.language == 'pt' ? 'br' : 'en'}/auth`)
+
+                let lastCurrent = 0
+                socket.on('dashboard-guilds-return-loading', (serverProps) => {
+                    let loadingMsg = document.getElementById('loadingMsg')
+                    loadingMsg.innerText = `${Number.parseInt(serverProps.current/serverProps.total*100)}% (${serverProps.current}/${serverProps.total})`
+                    lastCurrent = serverProps.current
+                    setTimeout(() => {
+                        if (lastCurrent <= serverProps.current && serverProps.current/serverProps.total < 1) router.push(`/${props.language == 'pt' ? 'br' : 'en'}/dashboard`)
+                    }, 4000)
+                })
+            } else if (!user.guilds) router.push(`/${props.language == 'pt' ? 'br' : 'en'}/auth`)
 
             function listGuilds(guilds) {
                 const noGuildsMsg = document.getElementById('noGuildsMsg');
@@ -44,12 +57,16 @@ function page(props) {
                 const rankMessageSwitch = document.getElementById('rankSwitch');
 
                 document.getElementById('loadingCircle').style.display = 'none';
+                document.getElementById('loadingMsg').style.display = 'none';
                 if (!guilds[0] && noGuildsMsg) return noGuildsMsg.innerText = props.language == 'pt' ? 'Desculpe, parece que você não tem servidores para gerenciar!' : 'Sorry, it looks like you don\'t have any servers to manage!';
 
                 const userGuilds = user.guilds
 
                 for (let i in guilds) {
                     let guild = userGuilds.find((g) => g.id == guilds[i].DBGuild._id)
+                    guild.DBGuild = guilds[i].DBGuild
+                    //guild.channels = guilds[i].channels
+
                     let verify = document.getElementById(guild ? guild.id : null)
                     if (!verify && guild && guild.id) {
                         let serversList = document.getElementById('serversList');
@@ -64,9 +81,9 @@ function page(props) {
                         document.getElementById(servButton.id).addEventListener('click', () => router.push({ pathname: `/${props.language == 'pt' ? 'br' : 'en'}/dashboard/guild`, query: { id: servButton.id } }))
                         document.getElementById(servButton.id).addEventListener('mouseover', () => {
                             let DBGuild = guild.DBGuild
-                            
+
                             serverInfos.className = 'serverInfos'
-                            setTimeout(() => {
+                            if (DBGuild) setTimeout(() => {
                                 serverInfos.className = 'serverInfos on'
                                 
                                 lang.innerText = DBGuild.language.replace('pt', 'PT-BR').replace('en', 'EN')
@@ -299,8 +316,11 @@ function page(props) {
                         <p className="controlPanel-buttons" onClick={disconnectUser} id="disconnectUser">{props.language == 'pt' ? 'Sair' : 'Exit'}</p>
                     </div>
                     <nav id="dashboardContent">
-                        <h2 id="noGuildsMsg" />
-                        <div id="loadingCircle" />
+                        <div id="alertsContaner">
+                            <div id="loadingCircle" />
+                            <p id="loadingMsg" />
+                            <p id="noGuildsMsg" />
+                        </div>
                         <div id="contaner">
                             <div id="serversList" />
                             <div id="serverInfos" className="serverInfos">

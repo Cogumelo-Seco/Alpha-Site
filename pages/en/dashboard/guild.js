@@ -19,7 +19,7 @@ function page(props) {
             withCredentials: true,
         })
         
-        function loadState(user) {
+        function loadState(user, complete) {
             functions('setUser', user, router)
 
             const serverContents = document.getElementById('serverContents');
@@ -29,7 +29,7 @@ function page(props) {
             socket.on('passed', () => alert(props.language == 'pt' ? 'Configurações salvas!' : 'Saved settings!'))
             socket.on('error', (msg) => alert(`ERROR: ${msg}`))
 
-            if (!user.guilds || !router.query.id) return
+            //if (!user.guilds || !router.query.id) return
             let guild = user.guilds.find((g) => g.id == router.query.id);
             if (!guild) {
                 router.push(require('../../../lib/data').page || '/')
@@ -472,8 +472,12 @@ function page(props) {
                         <p className="controlPanel-buttons" onClick={myInformationsClick} id="myInformations">{props.language == 'pt' ? 'Minhas informações' : 'My informations'}</p>
                         <p className="controlPanel-buttons" onClick={disconnectUser} id="disconnectUser">{props.language == 'pt' ? 'Sair' : 'Exit'}</p>
                     </div>
-                    <nav id="dashboardContent">
+
+                    <div id="alertsContaner">
                         <div id="loadingCircle" />
+                    </div>
+
+                    <nav id="dashboardContent">
                         <div id="serverContents">
                             <div id="serverHeader">
                                 <p>

@@ -19,6 +19,7 @@ function pt(props) {
         })
 
         function loadState(user) {
+            console.log(user)
             functions('setUser', user, router)
         }
         functions('getUser', cookie, socket, loadState, router)

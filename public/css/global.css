@@ -20,14 +20,23 @@
 /* Circulo de Carregando */
 
 div#loadingCircle {
-    position: absolute;
+    display: block;
+    
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background: url(../imgs/avatar/Default.png) no-repeat center;
+    background-size: cover;
+    border-radius: 100%;
+    animation: loadingCircle 1s linear infinite;
+    /*position: absolute;
     width: 40px;
     height: 40px;
     margin: 20px auto;
     background: url(../imgs/avatar/Default.png) no-repeat center;
     background-size: cover;
     border-radius: 100%;
-    animation: loadingCircle 1s linear infinite;
+    animation: loadingCircle 1s linear infinite;*/
 }
 
 div.zoom {

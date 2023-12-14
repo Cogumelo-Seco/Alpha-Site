@@ -13,6 +13,10 @@
     nav#dashboardContent {
         max-height: 100%;
     }
+
+    div#serverContents {
+        height: 100%;
+    }
     
     div.embedThumbnail,
     img.embedThumbnail {

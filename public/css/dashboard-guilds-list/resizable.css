@@ -10,4 +10,9 @@
     div.serverInfos {
         display: none;
     }
+
+    div#alertsContaner {
+        top: 16%;
+        width: 100%;
+    }
 }

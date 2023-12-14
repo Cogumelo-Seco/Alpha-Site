@@ -6,7 +6,16 @@
 
 /* Conteudo do Usuário */
 
-h2#noUserMsg {
+div#alertsContaner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(calc(110px + (-50%))) translateY(-50%);
+    width: 50%;
+    height: 30%;
+}
+
+p#noUserMsg {
     font-size: 20px;
     margin: 20px auto;
     color: rgb(255, 100, 100);

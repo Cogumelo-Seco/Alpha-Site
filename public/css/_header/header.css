@@ -20,7 +20,6 @@ header ul {
 
 li#alpha-image img,
 li.user-button img {
-    filter: grayscale(50%);
     width: 35px;
     border-radius: 50%;
     margin-top: 5px;

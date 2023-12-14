@@ -20,19 +20,19 @@ function page(props) {
 
         document.getElementById('myInformations').style.backgroundColor = '#b27bf290';
 
-        function loadState(user) {
+        function loadState(user, complete) {
             /*user.bannerURL = 'https://cdn.discordapp.com/banners/561315445026586635/3822ba4bbbde691e616ef1bb8e8dfc83.png?size=512'
             user.avatarURL = 'https://cdn.discordapp.com/avatars/584860173085048832/a_2c2a155090db7d2e24df2f4f28e6e0e1.gif'*/
             functions('setUser', user, router)
 
             if (user.bannerURL) document.getElementById('userHeader').style.backgroundImage = `url(${user.bannerURL})`;
             if (user.avatarURL) document.getElementById('userAvatar').src = user.avatarURL+'?size=2048';
-            document.getElementById('userName').innerText = user.tag;
+            document.getElementById('userName').innerText = user.global_name
             document.getElementById('costAlert').style.color = 'white';
             document.getElementById('save-button').style.display = 'inline-block';
-            document.getElementById('userProps').style.display = 'inline-block'; 
+            document.getElementById('userProps').style.display = 'inline-block';
 
-            if (user.guilds) {
+            if (user.guilds || complete) {
                 const userContents = document.getElementById('userContents');
 
                 const aboutmeBox = document.getElementById('aboutme-box');
@@ -90,7 +90,7 @@ function page(props) {
                         votesInfo.innerText = dbuser.voteCounter
                         counterInfo.innerText = dbuser.commandsCounter
                         if (spouse) {
-                            marryInfo.innerText = spouse.tag
+                            marryInfo.innerText = spouse.username
                             marryInfoImg.title = spouse.id
                             marryInfoImg.src = spouse.avatarURL || spouse.defaultAvatarURL
                         } else marry.style.display = 'none'
@@ -110,6 +110,7 @@ function page(props) {
             }
         } 
         functions('getUser', cookie, socket, loadState, router, true)
+        //require(`../../../public/js/getUser.js`).default(cookie, socket, loadState, router, true)
 
         const imageElements = document.getElementsByClassName('image')
         for (let imageElement of imageElements) {
@@ -129,8 +130,8 @@ function page(props) {
     })
 
 
-    let myInformationsClick = () => router.push('/br/dashboard/my')
-    let myServersClick = () => router.push('/br/dashboard')
+    let myInformationsClick = () => router.push(`/${props.language == 'pt' ? 'br' : 'en'}/dashboard/my`)
+    let myServersClick = () => router.push(`/${props.language == 'pt' ? 'br' : 'en'}/dashboard`)
     let disconnectUser = () => functions('disconnectUser', cookie, router)
 
     return (
@@ -158,9 +159,13 @@ function page(props) {
                         <p className="controlPanel-buttons" onClick={myInformationsClick} id="myInformations">{props.language == 'pt' ? 'Minhas informações' : 'My informations'}</p>
                         <p className="controlPanel-buttons" onClick={disconnectUser} id="disconnectUser">{props.language == 'pt' ? 'Sair' : 'Exit'}</p>
                     </div>
-                    <nav id="dashboardContent">
-                        <h2 id="noUserMsg" />
+
+                    <div id="alertsContaner">
                         <div id="loadingCircle" />
+                        <p id="noUserMsg" />
+                    </div>
+
+                    <nav id="dashboardContent">
                         <div id="userContents">
                             <div id="userHeader">
                                 <p>
@@ -175,7 +180,7 @@ function page(props) {
                                     <p id="color">{props.language == 'pt' ? 'Cor' : 'Color'}: 
                                         <p id="color-info">
                                             <input type="color" className="userPropsInputs" id="color-box" maxLength="20" />
-                                            <button id="color-button">{props.language == 'pt' ? 'Anterior' : 'Previous '}</button>
+                                            <button id="color-button">Reset</button>
                                         </p>
                                     </p>
                                     <p>{props.language == 'pt' ? 'Banco' : 'Bank'}: <alpha-bold id="bank-info" /></p>
