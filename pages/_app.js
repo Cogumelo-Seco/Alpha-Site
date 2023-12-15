@@ -156,8 +156,6 @@ function App({ Component, pageProps }) {
 
             <footer>
                 <p onClick={() => open('https://github.com/Cogumelo-Seco')} >{pageProps.language == 'pt' ? 'Feito por Cogu' : 'Made by Cogu'}</p>
-                <img className="topGG" src="https://top.gg/api/widget/servers/766006179209936946.svg?noavatar=true" onClick={() => open('https://top.gg/bot/766006179209936946')} />
-                <img className="topGG" src="https://top.gg/api/widget/upvotes/766006179209936946.svg?noavatar=true" onClick={() => open('https://top.gg/bot/766006179209936946')} />
             </footer>
         </>
     )

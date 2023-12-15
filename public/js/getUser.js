@@ -9,7 +9,7 @@ export default ([ cookie, socket, loadState, router, redirect ]) => {
         if (loadState) {
             loadState(user)
         }
-        for (let i in user.guilds) user.guilds[i].DBGuild = null
+        //for (let i in user.guilds) user.guilds[i].DBGuild = null
 
         /*socket.emit('dashboard', {
             type: 'get-guilds',

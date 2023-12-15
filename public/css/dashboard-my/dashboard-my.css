@@ -1,7 +1,11 @@
-﻿nav#dashboardContent {
-    position: relative;
-    display: block;
-    max-height: calc(100vh - (56px * 2));
+﻿div#dashboardContent {
+    position: absolute;
+    width: calc(100% - (202px + 2px));
+    height: calc(100% - (35px + 45px));
+    left: 202px;
+    top: 45px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Conteudo do Usuário */
@@ -10,7 +14,7 @@ div#alertsContaner {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(calc(110px + (-50%))) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     width: 50%;
     height: 30%;
 }

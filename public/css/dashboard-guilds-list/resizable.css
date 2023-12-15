@@ -1,6 +1,10 @@
 @media screen and (max-width:800px) {
-    nav#dashboardContent {
-        max-height: 100%;
+    div#dashboardContent {
+        position: inherit;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
     }
 
     div#serversList {
@@ -9,10 +13,5 @@
 
     div.serverInfos {
         display: none;
-    }
-
-    div#alertsContaner {
-        top: 16%;
-        width: 100%;
     }
 }

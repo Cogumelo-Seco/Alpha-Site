@@ -184,9 +184,11 @@ function page(props) {
             <body>
                 <section>
                     <div id="controlPanel" />
-                    <input id="searchInput" maxLength="100" />
-                    <h1 id="title" />
-                    <nav id="content" />
+                    <div id="contentContaner">
+                        <input id="searchInput" maxLength="100" />
+                        <h1 id="title" />
+                        <nav id="content" />
+                    </div>
                 </section>
             </body>
         </html>

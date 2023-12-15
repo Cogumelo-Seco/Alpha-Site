@@ -11,7 +11,7 @@ function page(props) {
     let cookie = cookies(cookiesProps)
 
     const router = useRouter()
-    require('../../lib/data').page = (props.language == 'pt' ? '/br' : '/en')+'/br/commands'
+    require('../../lib/data').page = (props.language == 'pt' ? '/br' : '/en')+`/commands`
 
     useEffect(() => {
         const socket = io(props.serv, {
@@ -184,9 +184,11 @@ function page(props) {
             <body>
                 <section>
                     <div id="controlPanel" />
-                    <input id="searchInput" maxLength="100" />
-                    <h1 id="title" />
-                    <nav id="content" />
+                    <div id="contentContaner">
+                        <input id="searchInput" maxLength="100" />
+                        <h1 id="title" />
+                        <nav id="content" />
+                    </div>
                 </section>
             </body>
         </html>
@@ -222,4 +224,4 @@ export async function getStaticProps() {
     }
 }
 
-export default page;
+export default page

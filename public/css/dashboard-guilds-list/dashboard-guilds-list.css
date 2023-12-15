@@ -5,10 +5,14 @@ alpha-bold {
     line-height: 20px;
 }
 
-nav#dashboardContent {
-    position: relative;
-    display: block;
-    max-height: calc(100vh - (56px * 2));
+div#dashboardContent {
+    position: absolute;
+    width: calc(100% - (202px + 2px));
+    height: calc(100% - (35px + 45px));
+    left: 202px;
+    top: 45px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 div#alertsContaner {
@@ -41,10 +45,11 @@ p#loadingMsg {
 div#contaner {
     display: inline-flex;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 div#serversList {
+    position: relative;
     width: 35%;
     overflow-y: auto;
     overflow-x: hidden;

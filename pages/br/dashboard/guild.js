@@ -29,22 +29,24 @@ function page(props) {
             socket.on('passed', () => alert(props.language == 'pt' ? 'Configurações salvas!' : 'Saved settings!'))
             socket.on('error', (msg) => alert(`ERROR: ${msg}`))
 
-            //if (!user.guilds || !router.query.id) return
+            /*if (!user.guilds || !router.query.id) return
             let guild = user.guilds.find((g) => g.id == router.query.id);
             if (!guild) {
                 router.push(require('../../../lib/data').page || '/')
                 alert('Permission denied')
                 return
-            }
+            }*/
 
+            console.log(router.query.id)
             socket.emit('dashboard', { 
                 type: 'get-guild',
-                id: guild.id,
+                id: router.query.id,
                 user
             })
 
-            socket.on('dashboard-guild-return', (DBGuild, channels, YTchannels) => {
-                if (!DBGuild || guild.permissions != 2147483647) return router.push('/br/dashboard');
+            socket.on('dashboard-guild-return', (guild, DBGuild, channels, YTchannels) => {
+                console.log(guild)
+                if (!DBGuild /*|| guild.permissions != 2147483647*/) return router.push('/br/dashboard');
 
                 let activeLoop = true
 
@@ -378,9 +380,9 @@ function page(props) {
                         .replace(/{guildMemberCount}/g, 13)
                         .replace(/{guildName}/g, guild.name)
                         .replace(/{avatar}/g, user.avatarURL || '/imgs/avatar/Default.png')
-                        .replace(/{@member}/g, `<alpha-metion>@${user.username}</alpha-metion>`)
-                        .replace(/{member}/g, user.username)
-                        .replace(/{memberTag}/g, user.tag)
+                        .replace(/{@member}/g, `<alpha-metion>@${user.global_name || user.username}</alpha-metion>`)
+                        .replace(/{member}/g, user.global_name || user.username)
+                        .replace(/{memberTag}/g, user.username)
                         .replace(/{memberId}/g, user.id)
                         .replace(/{lv}/g, 13)
 
@@ -477,7 +479,7 @@ function page(props) {
                         <div id="loadingCircle" />
                     </div>
 
-                    <nav id="dashboardContent">
+                    <div id="dashboardContent">
                         <div id="serverContents">
                             <div id="serverHeader">
                                 <p>
@@ -879,7 +881,7 @@ function page(props) {
                                 </div>
                             <div><button id="save-button">{props.language == 'pt' ? 'Salvar' : 'Save'}</button></div>
                         </div>
-                    </nav>
+                    </div>
                 </section>
             </body>
         </html>

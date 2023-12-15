@@ -26,6 +26,7 @@ function page(props) {
             functions('setUser', user, router)
 
             if (user.bannerURL) document.getElementById('userHeader').style.backgroundImage = `url(${user.bannerURL})`;
+            if (user.banner_color) document.getElementById('userHeader').style.backgroundColor = user.banner_color;
             if (user.avatarURL) document.getElementById('userAvatar').src = user.avatarURL+'?size=2048';
             document.getElementById('userName').innerText = user.global_name
             document.getElementById('costAlert').style.color = 'white';

@@ -114,7 +114,13 @@ a {
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+@media screen and (max-width:700px) {
+    body {
+        overflow-y: auto;
+    }
 }
 
 /* HTML5 display-role reset for older browsers */

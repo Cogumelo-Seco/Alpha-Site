@@ -9,13 +9,13 @@ nav#dashboardContent {
 /* Painel lateral */
 
 div#controlPanel {
-    float: left;
-    background-color: var(--page-color-1);
-    border-right: 2px solid var(--page-border-color);
-    height: calc(100vh - (56px * 2));
+    position: absolute;
+    height: calc(100% - (45px + 35px));
     width: 200px;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: var(--page-color-1);
+    border-right: 2px solid var(--page-border-color);
 }
 
 p.controlPanel-buttons {
@@ -66,10 +66,10 @@ div button#save-button {
     display: block;
     position: fixed;
     z-index: 1;
-    top: 50px;
-    right: 10px;
-    height: 30px;
-    width: 80px;
+    bottom: 50px;
+    left: 10px;
+    height: 40px;
+    width: 180px;
     font-size: 20px;
     cursor: pointer;
     color: white;
@@ -86,10 +86,18 @@ div button#save-button:hover {
 
 @media screen and (max-width:700px) {
     div#controlPanel {
+        position: inherit;
         border-right: 0;
-        border-bottom: 2px solid var(--page-border-color);
-        float: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.733);
         width: 100%;
         height: auto;
+    }
+
+    div button#save-button {
+        bottom: 2.5px;
+        left: auto;
+        right: 5px;
+        height: 30px;
+        width: 25%;
     }
 }
