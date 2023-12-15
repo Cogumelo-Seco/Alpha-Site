@@ -93,7 +93,7 @@ function page(props) {
                         if (spouse) {
                             marryInfo.innerText = spouse.username
                             marryInfoImg.title = spouse.id
-                            marryInfoImg.src = spouse.avatarURL || spouse.defaultAvatarURL
+                            marryInfoImg.src = spouse.avatarURL+'?size=2048' || spouse.defaultAvatarURL
                         } else marry.style.display = 'none'
 
                         function loop() {
@@ -161,12 +161,14 @@ function page(props) {
                         <p className="controlPanel-buttons" onClick={disconnectUser} id="disconnectUser">{props.language == 'pt' ? 'Sair' : 'Exit'}</p>
                     </div>
 
-                    <div id="alertsContaner">
-                        <div id="loadingCircle" />
-                        <p id="noUserMsg" />
-                    </div>
+                    
 
-                    <nav id="dashboardContent">
+                    <div id="dashboardContent">
+                        <div id="alertsContaner">
+                            <div id="loadingCircle" />
+                            <p id="noUserMsg" />
+                        </div>
+
                         <div id="userContents">
                             <div id="userHeader">
                                 <p>
@@ -200,7 +202,7 @@ function page(props) {
                             </div>
                             <div><button id="save-button">{props.language == 'pt' ? 'Salvar' : 'Save'}</button></div>
                         </div>
-                    </nav>
+                    </div>
                 </section>
             </body>
         </html>

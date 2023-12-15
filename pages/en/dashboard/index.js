@@ -43,7 +43,10 @@ function page(props) {
                     loadingMsg.innerText = `${Number.parseInt(serverProps.current/serverProps.total*100)}% (${serverProps.current}/${serverProps.total})`
                     lastCurrent = serverProps.current
                     setTimeout(() => {
-                        if (lastCurrent <= serverProps.current && serverProps.current/serverProps.total < 1) router.push(`/${props.language == 'pt' ? 'br' : 'en'}/dashboard`)
+                        if (lastCurrent <= serverProps.current && serverProps.current/serverProps.total < 1) {
+                            loadingMsg.style.color = '#BB3333'
+                            //router.push(`/${props.language == 'pt' ? 'br' : 'en'}/dashboard`)
+                        }
                     }, 4000)
                 })
             } else if (!user.guilds) router.push(`/${props.language == 'pt' ? 'br' : 'en'}/auth`)
@@ -240,9 +243,9 @@ function page(props) {
                                 .replace(/{guildMemberCount}/g, 13)
                                 .replace(/{guildName}/g, guild.name)
                                 .replace(/{avatar}/g, user.avatarURL || '/imgs/avatar/Default.png')
-                                .replace(/{@member}/g, `<alpha-metion>@${user.username}</alpha-metion>`)
-                                .replace(/{member}/g, user.username)
-                                .replace(/{memberTag}/g, user.tag)
+                                .replace(/{@member}/g, `<alpha-metion>@${user.global_name || user.username}</alpha-metion>`)
+                                .replace(/{member}/g, user.global_name || user.username)
+                                .replace(/{memberTag}/g, user.username)
                                 .replace(/{memberId}/g, user.id)
                                 .replace(/{lv}/g, 13)
             
@@ -315,7 +318,7 @@ function page(props) {
                         <p className="controlPanel-buttons" onClick={myInformationsClick} id="myInformations">{props.language == 'pt' ? 'Minhas informações' : 'My informations'}</p>
                         <p className="controlPanel-buttons" onClick={disconnectUser} id="disconnectUser">{props.language == 'pt' ? 'Sair' : 'Exit'}</p>
                     </div>
-                    <nav id="dashboardContent">
+                    <div id="dashboardContent">
                         <div id="alertsContaner">
                             <div id="loadingCircle" />
                             <p id="loadingMsg" />
@@ -411,7 +414,7 @@ function page(props) {
                                 </div>
                             </div>
                         </div>
-                    </nav>
+                    </div>
                 </section>
             </body>
         </html>

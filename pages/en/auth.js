@@ -36,13 +36,15 @@ const page = (props) => {
         }
         addDot()
 
-        function serverConnect() {
+        function serverConnect(loginID) {
             let cookiesProps = require('../../lib/data').cookies
             let cookie = cookies(cookiesProps)
 
             connect = true
             if (waitingText) waitingText.innerText = props.language == 'pt' ? 'Esperando confirmação, talvez seu navegador bloqueie o pop-up de login' : 'Waiting for confirmation, maybe your browser blocks the login popup'
-            if (!cookie.userId) window.open(props.serv+'/api/auth', "discord-auth-window", `width=400px,height=700px,top=30px,left=20pxstatus=yes,scrollbars=yes,resizable=yes`)
+
+            //if (!cookie.userId) window.open(props.serv+'/api/auth'+loginID, "discord-auth-window", `width=400px,height=700px,top=30px,left=20pxstatus=yes,scrollbars=yes,resizable=yes`)
+            //if (!cookie.userId) window.open(props.serv+'/api/auth', "discord-auth-window", `width=400px,height=700px,top=30px,left=20pxstatus=yes,scrollbars=yes,resizable=yes`)
         }
 
         function serverLogin(user) {
@@ -58,9 +60,12 @@ const page = (props) => {
         socket.emit('auth')
         socket.on('connect', serverConnect)
         socket.on('login', serverLogin)
+        socket.on('discordLogin', (loginID) => {
+            window.open(props.serv+'/api/auth'+loginID, "discord-auth-window", `width=400px,height=700px,top=30px,left=20pxstatus=yes,scrollbars=yes,resizable=yes`)
+        })
 
         reloadButton.addEventListener('click', () => {
-            if (time <= 5) return
+            if (time <= 4) return
 
             connect = false
             time = 0
@@ -73,6 +78,9 @@ const page = (props) => {
             socket.emit('auth')
             socket.on('connect', serverConnect)
             socket.on('login', serverLogin)
+            socket.on('discordLogin', (loginID) => {
+                window.open(props.serv+'/api/auth'+loginID, "discord-auth-window", `width=400px,height=700px,top=30px,left=20pxstatus=yes,scrollbars=yes,resizable=yes`)
+            })
         });
 
         const imageElements = document.getElementsByClassName('image')
