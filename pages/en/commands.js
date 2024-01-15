@@ -198,7 +198,7 @@ function page(props) {
 export async function getStaticProps() {
     let botInvite = process.env.botInvite
     let serv = process.env.SERVER
-    let secretApi = process.env.SECRET_API;
+    /*let secretApi = process.env.SECRET_API;
     
     let body = { error: null }
     try {
@@ -210,11 +210,11 @@ export async function getStaticProps() {
         if (body && body.error == undefined) body = await body.json()
     } catch (err) {
         body = { error: err }
-    }
+    }*/
 
     return {
         props: {
-            list: body || { error: null },
+            list: /*body ||*/ { error: null },
             serv,
             botInvite,
             languageChangeLink: '/commands',
