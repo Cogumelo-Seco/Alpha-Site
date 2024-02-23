@@ -3,3 +3,9 @@
         max-height: 100%;
     }
 }
+
+@media screen and (max-width:610px) {
+    section div.links {
+        width: 90%;
+    }
+}

@@ -66,3 +66,61 @@ div#content {
     width: 60vh;
     height: 60vh;
 }
+
+
+div#mobileButtonsContaner {
+    /*display: none;*/
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 148px;
+    width: 250px;
+}
+
+button.mobileButtons {
+    width: 70px;
+    height: 70px;
+    margin: 6px;
+    border-radius: 8px;
+    background-color: var(--item-color-2);
+    border: solid var(--page-border-color) 2px;
+    background-position: center;
+}
+
+button.mobileButtons:focus {
+    background-color: rgb(50, 50, 50);
+}
+
+div.mobileButtonsSeparator {
+    width: 100%;
+    height: 0px;
+}
+
+button.mobileButtons#mobileButtonUp {
+    margin: 0 auto;
+    background-image: url(/imgs/Arrows/arrow-up.png);
+}
+
+button.mobileButtons#mobileButtonDown {
+    background-image: url(/imgs/Arrows/arrow-down.png);
+}
+
+button.mobileButtons#mobileButtonLeft {
+    background-image: url(/imgs/Arrows/arrow-left.png);
+}
+
+button.mobileButtons#mobileButtonRight {
+    background-image: url(/imgs/Arrows/arrow-right.png);
+}
+
+@media screen and (max-width:490px) {
+    #gameContent {
+        width: 95vw;
+        height: 100vw;
+    }
+    #gameCanvas {
+        width: 95vw;
+        height: 95vw;
+    }
+}

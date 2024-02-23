@@ -1,5 +1,5 @@
 body {
-    --body-background: rgb(38, 44, 50);
+    /*--body-background: rgb(38, 44, 50);
     --page-border-color: rgb(0, 0, 0);
     --page-color-1: rgb(13, 19, 25);
     --item-color-1: rgb(24, 29, 39);
@@ -11,8 +11,8 @@ body {
     --item-color-4: rgb(47, 52, 60);
     --item-color-4-h: rgb(68, 55, 75);
     --item-button-color-1: rgb(39, 44, 55);
-    --item-button-color-1-h: rgb(62, 49, 65);
-    /*--body-background: rgb(45, 45, 45);
+    --item-button-color-1-h: rgb(62, 49, 65);*/
+    --body-background: rgb(45, 45, 45);
     --page-color-1: rgb(10, 10, 10);
     --page-border-color: rgb(30, 30, 30);
     --item-color-1: rgb(25, 25, 25);
@@ -24,5 +24,5 @@ body {
     --item-color-4: rgb(60, 60, 60);
     --item-color-4-h: rgb(55, 55, 75);
     --item-button-color-1: rgb(55, 55, 55);
-    --item-button-color-1-h: rgb(40, 40, 70);*/
+    --item-button-color-1-h: rgb(40, 40, 70);
 }
