@@ -14,6 +14,7 @@ function Err() {
             const Listener = createListener();
             const game = createGame(Listener, canvas);
             document.getElementById('gameContent').style.display = 'block'
+            document.getElementById('mobileButtonsContaner').style.display = 'block'
 
             game.loading({ Listener })
             Listener.state.game = game
@@ -46,14 +47,14 @@ function Err() {
                             </div>
                             <canvas id="gameCanvas" />
                         </div>
+                    </div>
 
-                        <div id="mobileButtonsContaner">
-                            <button className="mobileButtons" id="mobileButtonUp" />
-                            <div className="mobileButtonsSeparator" />
-                            <button className="mobileButtons" id="mobileButtonLeft" />
-                            <button className="mobileButtons" id="mobileButtonDown" />
-                            <button className="mobileButtons" id="mobileButtonRight" />
-                        </div>
+                    <div id="mobileButtonsContaner">
+                        <button className="mobileButtons" id="mobileButtonUp" />
+                        <div className="mobileButtonsSeparator" />
+                        <button className="mobileButtons" id="mobileButtonLeft" />
+                        <button className="mobileButtons" id="mobileButtonDown" />
+                        <button className="mobileButtons" id="mobileButtonRight" />
                     </div>
                 </section>
             </body>

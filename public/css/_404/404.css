@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 section {
     position: relative;
     height: calc(100vh - (59px * 2));
@@ -69,13 +73,17 @@ div#content {
 
 
 div#mobileButtonsContaner {
-    /*display: none;*/
+    z-index: 1;
+    display: none;
+    background-color: var(--page-color-1);
+    border-top: 2px solid var(--page-border-color);
     position: fixed;
     bottom: 5px;
+    margin-top: 70%;
     left: 50%;
     transform: translateX(-50%);
     height: 148px;
-    width: 250px;
+    width: 100%;
 }
 
 button.mobileButtons {
@@ -83,13 +91,13 @@ button.mobileButtons {
     height: 70px;
     margin: 6px;
     border-radius: 8px;
-    background-color: var(--item-color-2);
+    background-color: var(--item-button-color-1);
     border: solid var(--page-border-color) 2px;
     background-position: center;
 }
 
 button.mobileButtons:focus {
-    background-color: rgb(50, 50, 50);
+    background-color: var(--item-button-color-1-h);
 }
 
 div.mobileButtonsSeparator {
@@ -114,11 +122,16 @@ button.mobileButtons#mobileButtonRight {
     background-image: url(/imgs/Arrows/arrow-right.png);
 }
 
-@media screen and (max-width:490px) {
+@media screen and (max-width:500px) {
     #gameContent {
         width: 95vw;
-        height: 100vw;
+        height: 101vw;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
+
     #gameCanvas {
         width: 95vw;
         height: 95vw;

@@ -1,4 +1,21 @@
 export default (state, handleKeys) => {
+    let arrowButtons = document.getElementsByClassName('mobileButtons');
+
+    for (let buttonElement of arrowButtons) {
+        buttonElement.onclick = () => {
+            handleKeys({ event: {
+                code: 'Arrow'+buttonElement.id.replace(/mobileButton/g, ''),
+                key: 'Arrow'+buttonElement.id.replace(/mobileButton/g, '')
+            }, on: true })
+
+            setTimeout(() => {
+                handleKeys({ event: {
+                    code: 'Arrow'+buttonElement.id.replace(/mobileButton/g, ''),
+                    key: 'Arrow'+buttonElement.id.replace(/mobileButton/g, '')
+                }, on: false })
+            }, 0)
+        }
+    }
 /*
     state.buttons['MouseInfoButton'] = {
         minX: 0,
