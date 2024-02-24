@@ -127,7 +127,7 @@ button.mobileButtons#mobileButtonRight {
         width: 95vw;
         height: 101vw;
         position: fixed;
-        top: 50%;
+        top: 84px;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
     }

@@ -84,6 +84,9 @@ function createGame(Listener, canvas) {
     }
 
     async function gameLoop(command) {
+        if (window.innerWidth <= 500) document.getElementById('mobileButtonsContaner').style.display = 'block'
+        else document.getElementById('mobileButtonsContaner').style.display = 'none'
+
         let playerInfo = state.playerInfo
         let pressedKeys = []
         for (let i in Listener.state.keys) if (Listener.state.keys[i].clicked && Listener.state.keys[i].key) pressedKeys.push(Listener.state.keys[i].code)
