@@ -73,7 +73,7 @@ function pt(props) {
                             <p>{props.language == 'pt' ? 'Fogo dinamicamente criado por JavaScript' : 'Fire dynamically created by JavaScript'}</p>
                         </div>
                         <div className="links" onClick={() => open('https://gamejolt.com/@Cogumelo_Seco')}>
-                            <img src="https://m.gjcdn.net/user-avatar/200/4684396-ll-yhvjtsnr-v4.webp" />
+                            <img src="https://m.gjcdn.net/user-avatar/200/4684396-ll-rr7epaik-v4.webp" />
                             <p>{props.language == 'pt' ? 'GameJolt do meu criador' : 'GameJolt from my creator'}</p>
                         </div>
                     </div>

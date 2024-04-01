@@ -84,23 +84,29 @@ header ul div#language ul#selectLangBox {
     background-color: var(--page-color-1);
     position: absolute;
     flex-direction: column;
-    gap: .5rem;
+    gap: .3rem;
     justify-content: center;
-    padding: 10px;
+    padding: 5px;
     margin-top: 45px;
     border: solid black 1px;
-    border-radius: 15px;
+    border-radius: 8px;
     transform: translateY(-45px);
     opacity: 0;
     animation: langBox 0.15s ease forwards;
+    right: 0;
 }
 
 li#languagePT, 
 li#languageEN {
     margin-right: auto;
+    position: relative;
     color: white;
     cursor: pointer;
     transition: all 0.5s;
+    padding: 4px;
+    background-color: var(--item-color-4);
+    border-radius: 8px;
+    width: 93%
 }
 
 li {
@@ -110,7 +116,7 @@ li {
 
 li#languagePT:hover, 
 li#languageEN:hover {
-    color: rgb(233, 166, 255);
+    background-color: var(--item-color-4-h);
 }
 
 img#lang-image:hover {

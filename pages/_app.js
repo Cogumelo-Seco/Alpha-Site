@@ -81,9 +81,6 @@ function App({ Component, pageProps }) {
                         <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+'/commands'}>{pageProps.language == 'pt' ? 'Comandos' : 'Commands'}</Link>
                     </li>
                     <li className="header-buttons">
-                        <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+'/dashboard'}>Dashboard</Link>
-                    </li>
-                    <li className="header-buttons">
                         <a href={pageProps.botInvite} target="_blank">{pageProps.language == 'pt' ? 'Adicionar' : 'Add'}</a>
                     </li>
                     <li className="header-buttons">
@@ -113,24 +110,13 @@ function App({ Component, pageProps }) {
                         <img src="/imgs/bars.png" onClick={() => openCloseMobileHeader(true)} />
                     </li>
 
-                    <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+"/dashboard/my"} >
-                        <li className="user-button header" title={pageProps.language == 'pt' ? 'Desconectado' : 'Disconnected'}>
-                            <img className="user-button-image" src="https://cdn.discordapp.com/embed/avatars/1.png" />
-                        </li>
-                    </Link>
                 </ul>
 
                 <div id="ofuscation" onClick={() => openCloseMobileHeader(false)}/>
                 <div id="mobile-header">
                     <li className="open-close-button">
                         <img src="/imgs/x.png" onClick={() => openCloseMobileHeader(false)} />
-                    </li>
-
-                    <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+"/dashboard/my"} >
-                        <li className="user-button login-exit" title={pageProps.language == 'pt' ? 'Desconectado' : 'Disconnected'} href={(pageProps.language == 'pt' ? '/br' : '/en')+"/dashboard/my"} >
-                            <img className="user-button-image" src="https://cdn.discordapp.com/embed/avatars/1.png" />
-                        </li> 
-                    </Link>                   
+                    </li>              
 
                     <li className="header-buttons">
                         <a href="https://discord.gg/33Zsrg5dTc" target="_blank">{pageProps.language == 'pt' ? 'Suporte' : 'Support'}</a>
@@ -155,7 +141,7 @@ function App({ Component, pageProps }) {
             </CookiesProvider>
 
             <footer>
-                <p onClick={() => open('https://github.com/Cogumelo-Seco')} >{pageProps.language == 'pt' ? 'Feito por Cogu' : 'Made by Cogu'}</p>
+                <p onClick={() => open('https://github.com/Cogumelo-Seco')} >{pageProps.language == 'pt' ? 'Feito por Cogu 💜' : 'Made by Cogu 💜'}</p>
             </footer>
         </>
     )
