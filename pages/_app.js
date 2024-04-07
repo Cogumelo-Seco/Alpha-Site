@@ -124,9 +124,6 @@ function App({ Component, pageProps }) {
                     <li className="header-buttons" onClick={() => openCloseMobileHeader(false)}>
                         <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+'/commands'}>{pageProps.language == 'pt' ? 'Comandos' : 'Commands'}</Link>
                     </li>
-                    <li className="header-buttons" onClick={() => openCloseMobileHeader(false)}>
-                        <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+'/dashboard'}>Dashboard</Link>
-                    </li>
                     <li className="header-buttons">
                         <a href={pageProps.botInvite} target="_blank">{pageProps.language == 'pt' ? 'Adicionar' : 'Add'}</a>
                     </li>
