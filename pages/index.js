@@ -16,8 +16,7 @@ const load = () => {
         }
         setInterval(addDot, 500)
         addDot()
-        if (cookie && cookie.language == 'en') router.push('/en')
-        else router.push('/br')
+        router.push(cookie && cookie.language == 'en' ? '/en' : cookie && cookie.language == 'es' ? '/es' : 'br')
     })
     return (
         <html lang="pt-BR">

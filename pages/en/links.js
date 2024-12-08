@@ -34,7 +34,7 @@ function pt(props) {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/links" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Hello, I'm Alpha Bot, with a great RPG system to amuse everyone and a ranking system to make everyone active and competitive for 1st place" />
+                <meta property="og:description" content="Hi, I'm Alpha Bot, I have nothing to say. Good morning!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/links/animations.css" />
@@ -55,10 +55,6 @@ function pt(props) {
                         <div className="links" onClick={() => open('https://cogu-projects.vercel.app/pac-man')}>
                             <img src="/imgs/links/pac-man.png" />
                             <p>Pac-Man</p>
-                        </div>
-                        <div className="links" onClick={() => open('https://cogu-game-snake.vercel.app')}>
-                            <img src="/imgs/links/snake.png" />
-                            <p>{props.language == 'pt' ? 'Jogo multiplayer: 100 Nome' : 'Multiplayer game: 100 Nome'}</p>
                         </div>
                         <div className="links" onClick={() => open('https://infinite-run.vercel.app')} >
                             <img src="/imgs/links/infinite-run.png" />

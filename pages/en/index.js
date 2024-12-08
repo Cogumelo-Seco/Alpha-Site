@@ -34,7 +34,7 @@ function en(props) {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/en/" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Hello, I'm Alpha Bot, with a great RPG system to amuse everyone and a ranking system to make everyone active and competitive for 1st place" />
+                <meta property="og:description" content="Hi, I'm Alpha Bot, I have nothing to say. Good morning!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/home/animations.css" />
@@ -42,8 +42,8 @@ function en(props) {
             </head>
             <body>
                 <section>
-                    <h1 id="title">Hi I'm Alpha Bot</h1>
-                    <h3 id="description">A bot with rank systems to make everyone active and competitive for 1st place</h3>
+                    <h1 id="title">Hi, I'm Alpha Bot</h1>
+                    <h3 id="description">I have nothing to say. Good morning!</h3>
                     <a id="add-button" href={props.botInvite} target="_blank">Add me!</a>
                 </section>
             </body>

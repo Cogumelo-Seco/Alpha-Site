@@ -93,17 +93,16 @@ header ul div#language ul#selectLangBox {
     transform: translateY(-45px);
     opacity: 0;
     animation: langBox 0.15s ease forwards;
-    right: 0;
 }
 
-li#languagePT, 
-li#languageEN {
-    margin-right: auto;
+li.languageButton {
     position: relative;
     color: white;
     cursor: pointer;
     transition: all 0.5s;
     padding: 4px;
+    padding-top: 3px;
+    padding-bottom: 5px;
     background-color: var(--item-color-4);
     border-radius: 8px;
     width: 93%
@@ -114,8 +113,7 @@ li {
     text-align: left;
 }
 
-li#languagePT:hover, 
-li#languageEN:hover {
+li.languageButton:hover {
     background-color: var(--item-color-4-h);
 }
 
@@ -123,7 +121,7 @@ img#lang-image:hover {
     background-color: #2b2b2b;
 }
 
-img#languagePTFlag {
+img#languageFlag {
     vertical-align: top;
 }
 
@@ -131,7 +129,8 @@ img.languageFlag {
     margin-right: 5px;
     display: inline-block;
     width: 30px;
-    height: auto;
+    height: 18.45px;
+    transform: translateY(3px);
 }
 
 /* Painel lateral para quando a tela for diminuida */

@@ -35,7 +35,7 @@ function pt(props) {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Olá eu sou o Alpha Bot, não tenho nada a dizer. Bom dia!" />
+                <meta property="og:description" content="Hola soy Alpha Bot, no tengo nada que decir. ¡Buen día!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/home/animations.css" />
@@ -43,9 +43,9 @@ function pt(props) {
             </head>
             <body>
                 <section>
-                    <h1 id="title">Olá eu sou o Alpha Bot</h1>
-                    <h3 id="description">Olá eu sou o Alpha Bot, não tenho nada a dizer. Bom dia!</h3>
-                    <a id="add-button" href={props.botInvite} target="_blank">Me adicione!</a>
+                    <h1 id="title">Hola soy Alpha Bot</h1>
+                    <h3 id="description">No tengo nada que decir. ¡Buen día!</h3>
+                    <a id="add-button" href={props.botInvite} target="_blank">Añadir</a>
                 </section>
             </body>
         </html>
@@ -61,7 +61,7 @@ export async function getStaticProps(a) {
             serv,
             botInvite,
             languageChangeLink: '/',
-            language: 'pt'
+            language: 'es'
         },
         revalidate: 1800
     }

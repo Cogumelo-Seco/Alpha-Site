@@ -62,29 +62,29 @@ function App({ Component, pageProps }) {
             <div id="zoom" className="zoom" onClick={(e) => e.target.id == 'zoom' ? e.target.classList.toggle('open') : null}>
                 <div id="zoomContent">
                     <img id="zoomImage" src="http://localhost:3000/imgs/avatar/Default.png" />
-                    <a id="openOriginal" target="_blank">{pageProps.language == 'pt' ? 'Abrir Original' : 'Open original'}</a>
+                    <a id="openOriginal" target="_blank">{pageProps.language == 'pt' || pageProps.language == 'es' ? 'Abrir Original' : 'Open original'}</a>
                 </div>
             </div>
             
             <header>
                 <ul>
                     <li id="alpha-image">
-                        <Link href={pageProps.language == 'pt' ? '/br' : '/en'}>
+                        <Link href={pageProps.language == 'pt' ? '/br' : pageProps.language == 'es' ? '/es' : '/en'}>
                             <img src="/imgs/avatar/Default.png" />
                         </Link>
                     </li>
 
                     <li className="header-buttons">
-                        <a href="https://discord.gg/33Zsrg5dTc" target="_blank">{pageProps.language == 'pt' ? 'Suporte' : 'Support'}</a>
+                        <a href="https://discord.gg/33Zsrg5dTc" target="_blank">{pageProps.language == 'pt' ? 'Suporte' : pageProps.language == 'es' ? 'Soporte' : 'Support'}</a>
                     </li>
                     <li className="header-buttons">
-                        <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+'/commands'}>{pageProps.language == 'pt' ? 'Comandos' : 'Commands'}</Link>
+                        <Link href={(pageProps.language == 'pt' ? '/br' : pageProps.language == 'es' ? '/es' : '/en')+'/commands'}>{pageProps.language == 'pt' || pageProps.language == 'es' ? 'Comandos' : 'Commands'}</Link>
                     </li>
                     <li className="header-buttons">
-                        <a href={pageProps.botInvite} target="_blank">{pageProps.language == 'pt' ? 'Adicionar' : 'Add'}</a>
+                        <a href={pageProps.botInvite} target="_blank">{pageProps.language == 'pt' ? 'Adicionar' : pageProps.language == 'es' ? 'Añadir' : 'Add'}</a>
                     </li>
                     <li className="header-buttons">
-                        <a href={(pageProps.language == 'pt' ? '/br' : '/en')+'/links'}>Links</a>
+                        <a href={(pageProps.language == 'pt' ? '/br' : pageProps.language == 'es' ? '/es' : '/en')+'/links'}>Links</a>
                     </li>
 
                     <div id="language">
@@ -92,14 +92,20 @@ function App({ Component, pageProps }) {
 
                         <ul id="selectLangBox">
                             <Link href={'/br'+pageProps.languageChangeLink} >
-                                <li id="languagePT">
-                                    <img className="languageFlag" id="languagePTFlag" src="/imgs/brazil-flag.svg" />
-                                    PT-BR
+                                <li id="languagePT" className="languageButton">
+                                    <img className="languageFlag" id="languagePTFlag" src="/imgs/Flags/Brasil.png" />
+                                    PT
+                                </li>
+                            </Link>
+                            <Link href={'/es'+pageProps.languageChangeLink} >
+                                <li id="languageES" className="languageButton">
+                                    <img className="languageFlag" id="languageESFlag" src="/imgs/Flags/Mexico.png" />
+                                    ES
                                 </li>
                             </Link>
                             <Link href={'/en'+pageProps.languageChangeLink} >
-                                <li id="languageEN">
-                                    <img className="languageFlag" id="languageENFlag" src="/imgs/united-states-flag.svg" />
+                                <li id="languageEN" className="languageButton">
+                                    <img className="languageFlag" id="languageENFlag" src="/imgs/Flags/EUA.png" />
                                     EN
                                 </li>
                             </Link>
@@ -119,16 +125,16 @@ function App({ Component, pageProps }) {
                     </li>              
 
                     <li className="header-buttons">
-                        <a href="https://discord.gg/33Zsrg5dTc" target="_blank">{pageProps.language == 'pt' ? 'Suporte' : 'Support'}</a>
+                        <a href="https://discord.gg/33Zsrg5dTc" target="_blank">{pageProps.language == 'pt' ? 'Suporte' : pageProps.language == 'es' ? 'Soporte' : 'Support'}</a>
                     </li>
                     <li className="header-buttons" onClick={() => openCloseMobileHeader(false)}>
-                        <Link href={(pageProps.language == 'pt' ? '/br' : '/en')+'/commands'}>{pageProps.language == 'pt' ? 'Comandos' : 'Commands'}</Link>
+                        <Link href={(pageProps.language == 'pt' ? '/br' : pageProps.language == 'es' ? '/es' : '/en')+'/commands'}>{pageProps.language == 'pt' || pageProps.language == 'es' ? 'Comandos' : 'Commands'}</Link>
                     </li>
                     <li className="header-buttons">
-                        <a href={pageProps.botInvite} target="_blank">{pageProps.language == 'pt' ? 'Adicionar' : 'Add'}</a>
+                        <a href={pageProps.botInvite} target="_blank">{pageProps.language == 'pt' ? 'Adicionar' : pageProps.language == 'es' ? 'Añadir' : 'Add'}</a>
                     </li>
                     <li className="header-buttons" onClick={() => openCloseMobileHeader(false)}>
-                        <a href={(pageProps.language == 'pt' ? '/br' : '/en')+'/links'}>Links</a>
+                        <a href={(pageProps.language == 'pt' ? '/br' : pageProps.language == 'es' ? '/es' : '/en')+'/links'}>Links</a>
                     </li>
                 </div>
             </header>
@@ -138,7 +144,7 @@ function App({ Component, pageProps }) {
             </CookiesProvider>
 
             <footer>
-                <p onClick={() => open('https://github.com/Cogumelo-Seco')} >{pageProps.language == 'pt' ? 'Feito por Cogu 💜' : 'Made by Cogu 💜'}</p>
+                <p onClick={() => open('https://github.com/Cogumelo-Seco')} >{pageProps.language == 'pt' ? 'Feito por Cogu 💜' : pageProps.language == 'es' ? 'Hecho por Cogu 💜' : 'Made by Cogu 💜'}</p>
             </footer>
         </>
     )

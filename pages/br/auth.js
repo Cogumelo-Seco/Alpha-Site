@@ -110,7 +110,7 @@ const page = (props) => {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/auth" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Olá eu sou o Alpha Bot, com um ótimo sistema de RPG para divertir a todos e um sistemas de rank para deixar todos ativos e competitivos para o 1° lugar!" />          
+                <meta property="og:description" content="Olá eu sou o Alpha Bot, não tenho nada a dizer. Bom dia!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/auth/auth.css" />

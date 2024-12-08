@@ -110,7 +110,7 @@ const page = (props) => {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/auth" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Hi, I'm Alpha Bot, I have nothing to say. Good morning!" />
+                <meta property="og:description" content="Hola soy Alpha Bot, no tengo nada que decir. ¡Buen día!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/auth/auth.css" />
@@ -146,7 +146,7 @@ export async function getStaticProps() {
             serv: serv,
             image: imgs[Math.floor(Math.random()*imgs.length-1)] || 'https://cdn.discordapp.com/attachments/792642251519426590/903775899399389234/unknown.png',
             languageChangeLink: '/auth',
-            language: 'en'
+            language: 'es'
         },
         revalidate: 30
     }

@@ -1,4 +1,8 @@
 @media screen and (max-width:700px) {
+    header {
+        height: 48px;
+    }
+    
     header ul li.header-buttons {
         display: none;
     }

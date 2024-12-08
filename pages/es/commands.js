@@ -995,7 +995,7 @@ export async function getStaticProps() {
             serv,
             botInvite,
             languageChangeLink: '/commands',
-            language: 'en'
+            language: 'es'
         },
         revalidate: 30
     }

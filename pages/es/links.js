@@ -10,7 +10,7 @@ function pt(props) {
     let cookiesProps = require('../../lib/data').cookies
     let cookie = cookies(cookiesProps)
 
-    require('../../lib/data').page = (props.language == 'pt' ? '/br' : '/en')
+    require('../../lib/data').page = props.language == 'pt' ? '/br' : props.language == 'es' ? '/es' : '/en'
     const router = useRouter()
 
     useEffect(() => {
@@ -34,7 +34,7 @@ function pt(props) {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/links" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Olá eu sou o Alpha Bot, não tenho nada a dizer. Bom dia!" />
+                <meta property="og:description" content="Hola soy Alpha Bot, no tengo nada que decir. ¡Buen día!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/links/animations.css" />
@@ -44,7 +44,7 @@ function pt(props) {
             <body>
                 <section>
                     <div>
-                        <div className="links" onClick={() => open('https://funcog.vercel.app/')}>
+                    <div className="links" onClick={() => open('https://funcog.vercel.app/')}>
                             <img src="/imgs/links/fnf.png" />
                             <p>FunCog</p>
                         </div>
@@ -58,19 +58,19 @@ function pt(props) {
                         </div>
                         <div className="links" onClick={() => open('https://infinite-run.vercel.app')} >
                             <img src="/imgs/links/infinite-run.png" />
-                            <p>{props.language == 'pt' ? 'Infinite Run' : 'Infinite Run'}</p>
+                            <p>Infinite Run</p>
                         </div>
                         <div className="links" onClick={() => open('https://cogu-projects.vercel.app/minesweeper')}>
                             <img src="/imgs/links/minesweeper.png" />
-                            <p>{props.language == 'pt' ? 'Campo Minado' : 'Minesweeper'}</p>
+                            <p>Buscaminas</p>
                         </div>
                         <div className="links" onClick={() => open('https://cogu-fogo-do-doom.vercel.app/')} >
                             <img src="/imgs/links/fire-of-doom.png" />
-                            <p>{props.language == 'pt' ? 'Fogo dinamicamente criado por JavaScript' : 'Fire dynamically created by JavaScript'}</p>
+                            <p>Fuego creado dinámicamente por JavaScript</p>
                         </div>
                         <div className="links" onClick={() => open('https://gamejolt.com/@Cogumelo_Seco')}>
                             <img src="https://m.gjcdn.net/user-avatar/200/4684396-ll-rr7epaik-v4.webp" />
-                            <p>{props.language == 'pt' ? 'GameJolt do meu criador' : 'GameJolt from my creator'}</p>
+                            <p>GameJolt de mi creador</p>
                         </div>
                     </div>
                 </section>
@@ -88,7 +88,7 @@ export async function getStaticProps(a) {
             serv,
             botInvite,
             languageChangeLink: '/links',
-            language: 'pt'
+            language: 'es'
         },
         revalidate: 1800
     }

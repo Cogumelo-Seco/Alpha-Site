@@ -50,7 +50,7 @@ function page(props) {
                 category.className = "controlPanel-buttons"
                 category.id = categoryName
                 category.innerHTML = `
-                    <a class="categoryName">${props.language == 'pt' ? translate(categoryName) : categoryName}</a>
+                    <a class="categoryName">${props.language == 'pt' ? translate(categoryName, 'pt') : props.language == 'es' ? translate(categoryName, 'es') : categoryName}</a>
                     <a class="categoryAmount">${list[categoryName]?.length}</a>
                 `
                 category.addEventListener('click', (event) => {
@@ -75,8 +75,7 @@ function page(props) {
 
             listElemet.innerHTML = ''
             currentCategory = Element.id
-            searchInput.placeholder = props.language == 'pt' ? `Procurar em ${translate(currentCategory)}` : `Search in ${currentCategory}`
-            //title.innerHTML = props.language == 'pt' ? translate(Element.id) : Element.id
+            searchInput.placeholder = props.language == 'pt' ? `Procurar em ${translate(currentCategory, 'pt')}` : props.language == 'es' ? `Buscar en ${translate(currentCategory, 'es')}` : `Search in ${currentCategory}`
 
             for (let i in json) {
                 let command = document.createElement('div');
@@ -95,22 +94,22 @@ function page(props) {
                     <p class="commandDescription" >${props.language == 'pt' ? json[i].pt : json[i].en}</p>
                     <div id="commandInfos-${json[i].name}" class="commandInfos">
                         <div class="commandInfosSynonyms">
-                            <span class="commandInfosInfoName">${props.language == 'pt' ? 'Sinônimos' : 'Synonyms'}:</span>
+                            <span class="commandInfosInfoName">${props.language == 'pt' ? 'Sinônimos' : props.language == 'es' ? 'Sinónimos' : 'Synonyms'}:</span>
                             <span class="commandInfosInfoDescription"><alpha-bold class="synonyms">${json[i].synonyms.split(',').join('</alpha-bold>, <alpha-bold>')}</alpha-bold></span>
                         </div>
                         ${(props.language == 'pt' ? json[i].howToUsePT : json[i].howToUseEN) ?
                             `<div class="commandInfosHowToUse">
-                                <span class="commandInfosInfoName">${props.language == 'pt' ? 'Como usar' : 'How to use'}:</span>
+                                <span class="commandInfosInfoName">${props.language == 'pt' ? 'Como usar' : props.language == 'es' ? 'Como usar' : 'How to use'}:</span>
                                 <span class="commandInfosInfoDescription"><alpha-bold>${json[i].name} ${props.language == 'pt' ? json[i].howToUsePT.replace(/[<]/g, '&lt').replace(/[>]/g, '&gt') : json[i].howToUseEN.replace(/[<]/g, '&lt').replace(/[>]/g, '&gt')}</alpha-bold></span>
                             </div>                            
 
                             <div class="commandInfosInformation">
-                                <span class="commandInfosInfoName">${props.language == 'pt' ? 'Informações' : 'Information'}:</span>
-                                <span class="commandInfosInfoDescription"><alpha-bold>${props.language == 'pt' ? '&lt; &gt;</alpha-bold> - Obrigatório<br />&emsp;<alpha-bold>[ ]</alpha-bold> - Opcional' : '&lt; &gt;</alpha-bold> - Required<br />&emsp;<alpha-bold>[ ]</alpha-bold> - Optional'}
+                                <span class="commandInfosInfoName">${props.language == 'pt' ? 'Informações' : props.language == 'es' ? 'Información' : 'Information'}:</span>
+                                <span class="commandInfosInfoDescription"><alpha-bold>${props.language == 'pt' ? '&lt; &gt;</alpha-bold> - Obrigatório<br />&emsp;<alpha-bold>[ ]</alpha-bold> - Opcional' : props.language == 'es' ? '&lt; &gt;</alpha-bold> - Obligatorio<br />&emsp;<alpha-bold>[ ]</alpha-bold> - Opcional' : '&lt; &gt;</alpha-bold> - Required<br />&emsp;<alpha-bold>[ ]</alpha-bold> - Optional'}
                                 </span>
                             </div>
                             
-                            <span class="commandInfosAlert">${props.language == 'pt' ? 'Remova os caracteres <> [] para executar os comandos!' : 'Remove the characters <> [] to run the commands'}</span>`
+                            <span class="commandInfosAlert">${props.language == 'pt' ? 'Remova os caracteres <> [] para executar os comandos!' : props.language == 'es' ? '¡Elimine los caracteres <> [] para ejecutar los comandos!' : 'Remove the characters <> [] to run the commands'}</span>`
                         : ''}
                         ${json[i].usageExample ? 
                             `<img class="commandExempleImage" src="${json[i].usageExample}" />`
@@ -143,14 +142,25 @@ function page(props) {
             }
         }
 
-        function translate(text) {
-            return text
-                .replace('Economy', 'Economia')
-                .replace('Fun', 'Diversão')
-                .replace('General', 'Geral')
-                .replace('Moderation', 'Moderação')
-                .replace('Utils', 'Úteis')
-                .replace('All', 'Todos')
+        function translate(text, lang) {
+            return lang == 'pt' ? 
+                text
+                    .replace('Economy', 'Economia')
+                    .replace('Fun', 'Diversão')
+                    .replace('General', 'Geral')
+                    .replace('Info', 'Informação')
+                    .replace('Moderation', 'Moderação')
+                    .replace('Utils', 'Úteis')
+                    .replace('All', 'Todos')
+                :
+                text
+                    .replace('Economy', 'Economía')
+                    .replace('Fun', 'Divertido')
+                    .replace('General', 'General')
+                    .replace('Info', 'Información')
+                    .replace('Moderation', 'Moderación')
+                    .replace('Utils', 'Útil')
+                    .replace('All', 'Todo')
         }
 
         function zoomImage(src) {
@@ -174,7 +184,7 @@ function page(props) {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br/commands" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Olá eu sou o Alpha Bot, com um ótimo sistema de RPG para divertir a todos e um sistemas de rank para deixar todos ativos e competitivos para o 1° lugar!" />
+                <meta property="og:description" content="Hola soy Alpha Bot, no tengo nada que decir. ¡Buen día!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/commands/animations.css" />
