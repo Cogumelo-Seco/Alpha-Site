@@ -35,7 +35,7 @@ function pt(props) {
                 <meta property="og:site_name" content="Alpha Site" />
                 <meta property="og:url" content="https://alpha-site.vercel.app/br" />                
                 <meta property="og:image" content="/avatar/Roxo.png" />
-                <meta property="og:description" content="Hola soy Alpha Bot, no tengo nada que decir. ¡Buen día!" />
+                <meta property="og:description" content="Hola soy Alpha Bot, no tengo nada que decir. ¡Buenos días!" />
             </Head>
             <head>
                 <link rel="stylesheet" href="/css/home/animations.css" />
@@ -44,7 +44,7 @@ function pt(props) {
             <body>
                 <section>
                     <h1 id="title">Hola soy Alpha Bot</h1>
-                    <h3 id="description">No tengo nada que decir. ¡Buen día!</h3>
+                    <h3 id="description">No tengo nada que decir. ¡Buenos días!</h3>
                     <a id="add-button" href={props.botInvite} target="_blank">Añadir</a>
                 </section>
             </body>
